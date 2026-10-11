@@ -8,4 +8,9 @@ $(document).ready(function(){
     $('.sub-menu').stop().slideUp();
     $('.header-bg').stop().slideUp();
   });
+
+
+  $('.mobile-hamburger').click(function () { 
+    $('.mobile-hamburger-inner').stop().animate({left: 0})
+  });
 });

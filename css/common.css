@@ -80,8 +80,6 @@ header{
   padding-top: 2.2%;
 }
 
-.mobile-gnb,
-.mobile-hamburher{display: none;}
 
 
 .search{
@@ -130,7 +128,7 @@ nav h2{font-size: 18px; font-weight: 500;}
 
 /* --------------------HeaderEnd------------- */
 
-
+.mobile-hamburger{display: none;}
 
 
 
@@ -210,14 +208,19 @@ footer a{color: #1a1a1a;}
   .etc .hamburger{display: none;}
   
   
-  .mobile-hamburher{
-    width: 300px;
+  .mobile-hamburger{
     display: block;
+    width: 300px;
     position: absolute;
     top: 20px; left: 0;
     padding-left: 20px;
     background-color: #e7e7e7;
   }
+/* 
+  .mobile-hamburger-inner{
+    position: relative;
+    left: -100%; display: none;
+  } */
 
 
   .mobile-hamburger-top{display: flex; gap: 20px; align-items: center;}
