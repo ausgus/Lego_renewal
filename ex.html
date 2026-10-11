@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 카테고리 필터</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        .container {
+            width: min(1200px, calc(100% - 40px));
+            margin: 80px auto;
+        }
+
+        /* 제목 */
+        .title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .title h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .title p {
+            color: #777;
+        }
+
+        /* 카테고리 */
+        .category {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .category button {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .category button:hover {
+            background: #222;
+            color: white;
+        }
+
+        .category button.active {
+            background: #222;
+            color: white;
+            border-color: #222;
+        }
+
+        /* 상품 목록 */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .product {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            height: 220px;
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            display: inline-block;
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .product h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* 상품이 없을 때 */
+        .empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 80px 0;
+            color: #777;
+        }
+
+        /* 태블릿 */
+        @media (max-width: 900px) {
+            .product-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* 모바일 */
+        @media (max-width: 600px) {
+            .product-list {
+                grid-template-columns: 1fr;
+            }
+
+            .title h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="title">
+            <h1>PRODUCT</h1>
+            <p>카테고리를 선택해 원하는 상품을 확인하세요.</p>
+        </div>
+
+
+        <!-- 카테고리 버튼 -->
+        <div class="category">
+
+            <button class="active" data-category="all">
+                전체
+            </button>
+
+            <button data-category="laptop">
+                노트북
+            </button>
+
+            <button data-category="phone">
+                스마트폰
+            </button>
+
+            <button data-category="tablet">
+                태블릿
+            </button>
+
+            <button data-category="accessory">
+                액세서리
+            </button>
+
+            <button data-category="none"> 
+                없음
+            </button>
+
+        </div>
+
+
+        <!-- 상품 출력 영역 -->
+        <div class="product-list" id="productList"></div>
+
+    </div>
+
+
+    <script>
+
+        // ========================================
+        // 1. 상품 데이터
+        // ========================================
+
+        const products = [
+
+            {
+                name: "MacBook Pro",
+                category: "laptop",
+                categoryName: "노트북",
+                price: 2490000,
+                icon: "💻"
+            },
+
+            {
+                name: "Galaxy Book",
+                category: "laptop",
+                categoryName: "노트북",
+                price: 1590000,
+                icon: "💻"
+            },
+
+            {
+                name: "iPhone 17",
+                category: "phone",
+                categoryName: "스마트폰",
+                price: 1390000,
+                icon: "📱"
+            },
+
+            {
+                name: "Galaxy S26",
+                category: "phone",
+                categoryName: "스마트폰",
+                price: 1290000,
+                icon: "📱"
+            },
+
+            {
+                name: "iPad Pro",
+                category: "tablet",
+                categoryName: "태블릿",
+                price: 1790000,
+                icon: "📱"
+            },
+
+            {
+                name: "Galaxy Tab",
+                category: "tablet",
+                categoryName: "태블릿",
+                price: 1090000,
+                icon: "📱"
+            },
+
+            {
+                name: "Magic Mouse",
+                category: "accessory",
+                categoryName: "액세서리",
+                price: 119000,
+                icon: "🖱️"
+            },
+
+            {
+                name: "AirPods Pro",
+                category: "accessory",
+                categoryName: "액세서리",
+                price: 359000,
+                icon: "🎧"
+            }
+
+        ];
+
+
+        // ========================================
+        // 2. 상품 출력 함수
+        // ========================================
+
+        function displayProducts(productArray) {
+
+            const productList = document.querySelector("#productList");
+
+            // 기존 상품 제거
+            productList.innerHTML = "";
+
+
+            // 상품이 없는 경우
+            if (productArray.length === 0) {
+
+                productList.innerHTML = `
+                    <div class="empty">
+                        해당 카테고리의 상품이 없습니다.
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            // 상품 출력
+            productArray.forEach(function(product) {
+
+                productList.innerHTML += `
+
+                    <div class="product">
+
+                        <div class="product-image">
+                            ${product.icon} 
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                ${product.categoryName}
+                            </span>
+
+                            <h2>
+                                ${product.name}
+                            </h2>
+
+                            <p class="price">
+                                ${product.price.toLocaleString()}원
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+            });
+
+        }
+
+
+        // ========================================
+        // 3. 처음에는 전체 상품 출력
+        // ========================================
+
+        displayProducts(products);
+
+
+        // ========================================
+        // 4. 카테고리 버튼 가져오기
+        // ========================================
+
+        const categoryButtons =
+            document.querySelectorAll(".category button");
+
+
+        // ========================================
+        // 5. 버튼 클릭
+        // ========================================
+
+        categoryButtons.forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                // 클릭한 버튼의 data-category 가져오기
+                const selectedCategory =
+                    this.dataset.category;
+
+
+                // ========================================
+                // 6. 버튼 active 처리
+                // ========================================
+
+                categoryButtons.forEach(function(button) {
+
+                    button.classList.remove("active");
+
+                });
+
+                this.classList.add("active");
+
+
+                // ========================================
+                // 7. 상품 필터링
+                // ========================================
+
+                if (selectedCategory === "all") {
+
+                    // 전체 상품
+                    displayProducts(products);
+
+                } else {
+
+                    // 선택한 카테고리만 필터링
+                    const filteredProducts =
+                        products.filter(function(product) {
+
+                            return product.category === selectedCategory;
+
+                        });
+
+
+                    // 필터링된 상품 출력
+                    displayProducts(filteredProducts);
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
