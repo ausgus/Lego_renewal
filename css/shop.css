@@ -59,5 +59,14 @@ h1{color: #eaeaea;}
 }
 
 
-footer h1,
-footer a{color: #1a1a1a;}
+@media (max-width:786px) {
+  .content-wrap{
+    display: flex; flex-direction: column;
+  }
+
+
+
+  #productList{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

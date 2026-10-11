@@ -34,6 +34,8 @@ input, select {
 
 h1{font-size: 48px; font-weight: 600;}
 h2{font-size: 20px; font-weight: normal;}
+em{font-style: normal; color: #f82020;}
+strong{font-weight: normal; color: #D7FA24;}
 body{font-size: 14px; font-weight: 300;}
 
 
@@ -49,6 +51,7 @@ header{
   box-sizing: border-box;
   background-color: #e7e7e7;
   position: relative;
+  color: #1a1a1a;
 }
 
 .header-bg{
@@ -77,6 +80,9 @@ header{
   padding-top: 2.2%;
 }
 
+.mobile-gnb,
+.mobile-hamburher{display: none;}
+
 
 .search{
   width: 220px;
@@ -102,6 +108,7 @@ header{
 nav{width: 40%;}
 nav h2{font-size: 18px; font-weight: 500;}
 .gnb{
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -184,3 +191,60 @@ footer a{color: #1a1a1a;}
 }
 
 /* ------------FooterEnd------------- */
+
+
+
+
+
+
+
+/* ------------Tablet Version------------ */
+
+@media (max-width: 786px) {
+  
+  .header-wrap{
+    width: 100%;
+    flex-direction: row-reverse;
+  }
+  
+  .etc .hamburger{display: none;}
+  
+  
+  .mobile-hamburher{
+    width: 300px;
+    display: block;
+    position: absolute;
+    top: 20px; left: 0;
+    padding-left: 20px;
+    background-color: #e7e7e7;
+  }
+
+
+  .mobile-hamburger-top{display: flex; gap: 20px; align-items: center;}
+  .mobile-hamburger-top img{height: 25px;}
+
+  .login-wrap{
+    margin: 20px 0;
+  }
+
+  .login-wrap img{width: 30px; margin-right: 20px; padding-top: 3px;}
+
+  .mobile-gnb{
+    display: block;
+    margin-top: 10px;
+  }
+
+  .mobile-gnb .sub-menu{display: none;}
+
+
+
+
+  
+  
+  .search{
+    width: 150px;
+  }
+  
+  
+  .gnb{display: none;}
+}
