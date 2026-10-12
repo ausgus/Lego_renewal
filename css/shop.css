@@ -63,7 +63,7 @@ h1{color: #eaeaea;}
 }
 
 
-@media (max-width:786px) {
+@media (max-width:1024px) {
   .content-wrap{
     display: flex; flex-direction: column;
   }
