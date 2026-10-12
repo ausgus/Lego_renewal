@@ -42,11 +42,12 @@
     <div class="header-bg"></div>
     <div class="header-wrap">
       <div class="mobile-hamburger">
+        <div class="mobile-hamburger-top">
+          <div class="mobile-hamburger-top-bg"></div>
+          <img src="images/Icon-hamburger.png" alt="햄버거 메뉴">
+          <h2>LEGO® <em>Insiders</em></h2>
+        </div>
         <div class="mobile-hamburger-inner">
-          <div class="mobile-hamburger-top">
-            <img src="images/Icon-hamburger.png" alt="햄버거 메뉴">
-            <h2>LEGO® <em>Insiders</em></h2>
-          </div>
           
           <ul class="account">
             <li>
@@ -55,20 +56,11 @@
                 <li><h2><a href="#"><img src="images/icon-truck.png" alt="delevery">주문현황</a></h2></li>
               </ul>
             </li>
-          
-            <li>
-              <ul class="member-reward">
-                <li><h2><a href="#"><img src="images/icon-point.png" alt="point">포인트 적립</a></h2></li>
-                <li><h2><a href="#"><img src="images/icon-reword.png" alt="reword">회원 전용 리워드 교환</a></h2></li>
-                <li><h2><a href="#"><img src="images/icon-gift.png" alt="gift">구매 시 선물 증정</a></h2></li>
-                <li><h2><a href="#"><img src="images/icon-firstOrder.png" alt="firstOrder">선주문 혜택 </a></h2></li>
-              </ul>
-            </li>
           </ul>
           
           
           <ul class="mobile-gnb">
-            <li class="main-menu">
+            <li class="mobile-main-menu">
               <h2><a href="shop.html">제품</a></h2>
               <ul class="sub-menu">
                 <li><a href="#">Vehicle</a></li>
@@ -80,7 +72,7 @@
           
           
             
-            <li class="main-menu">
+            <li class="mobile-main-menu">
               <h2><a href="shop.html">이벤트</a></h2>
               <ul class="sub-menu">
                 <li><a href="#">뉴스</a></li>
@@ -90,7 +82,7 @@
           
           
             
-            <li class="main-menu">
+            <li class="mobile-main-menu">
               <h2><a href="shop.html">레고 브랜드 소개</a></h2>
               <ul class="sub-menu">
                 <li><a href="#">레고 그룹 소개</a></li>
@@ -101,7 +93,7 @@
           
           
             
-            <li class="main-menu">
+            <li class="mobile-main-menu">
               <h2><a href="shop.html">고객 지원</a></h2>
               <ul class="sub-menu">
                 <li><a href="#">자주하는 질문</a></li>
@@ -110,6 +102,13 @@
               </ul>
             </li>
           </ul>
+
+          <ul class="member-reward">
+                <li><h2><a href="#"><img src="images/icon-point.png" alt="point">포인트 적립</a></h2></li>
+                <li><h2><a href="#"><img src="images/icon-reword.png" alt="reword">회원 전용 리워드 교환</a></h2></li>
+                <li><h2><a href="#"><img src="images/icon-gift.png" alt="gift">구매 시 선물 증정</a></h2></li>
+                <li><h2><a href="#"><img src="images/icon-firstOrder.png" alt="firstOrder">선주문 혜택 </a></h2></li>
+              </ul>
         </div>
       </div>
 
@@ -239,32 +238,39 @@
         </li>
       </ul>
 
-      <div id="productList">
-        <!-- <div class="productCard">
-          <img class="productImg" src="images/vehicle/car.png" alt="f1">
-          <h2 class="productName">Oracle Red Bull Racing<br>RB20 F1 레이스 카</h2>
-          <p class="productPrice">₩319,000</p>
-        </div>
-
-
-        <div class="productCard">
-          <img class="productImg" src="images/category/art.png" alt="f1">
-          <h2 class="productName">Oracle Red Bull Racing<br>RB20 F1 레이스 카</h2>
-          <p class="productPrice">₩319,000</p>
-        </div>
-
-        <div class="productCard">
-          <img class="productImg" src="images/category/architech.png" alt="f1">
-          <h2 class="productName">Oracle Red Bull Racing<br>RB20 F1 레이스 카</h2>
-          <p class="productPrice">₩319,000</p>
-        </div>
-        
-        <div class="productCard">
-          <img class="productImg" src="images/category/collection.png" alt="f1">
-          <h2 class="productName">Oracle Red Bull Racing<br>RB20 F1 레이스 카</h2>
-          <p class="productPrice">₩319,000</p>
-        </div> -->
+      <div class="mobile-category-list-wrap">
+        <ul class="mobile-category-list">
+          <li>
+            <h1><button data-category="all" class="main-category active">All</button></h1>
+          </li>
+  
+  
+  
+          <li>
+            <h1><button data-category="Vehicle" class="main-category">Vehicle</button></h1>
+          </li>
+  
+  
+  
+          <li>
+            <h1><button data-category="Architech" class="main-category">Architech</button></h1>
+          </li>
+  
+  
+  
+          <li>
+            <h1><button data-category="Art" class="main-category">Art</button></h1>
+          </li>
+  
+  
+  
+          <li>
+            <h1><button data-category="Collection" class="main-category">Collection</button></h1>
+          </li>
+        </ul>
       </div>
+
+      <div id="productList"></div>
       
       </div>
     </div>

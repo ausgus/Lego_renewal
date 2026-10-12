@@ -50,7 +50,8 @@ header{
   padding: 20px;
   box-sizing: border-box;
   background-color: #e7e7e7;
-  position: relative;
+  position: fixed;
+  left: 0; top: 0;
   color: #1a1a1a;
 }
 
@@ -123,12 +124,14 @@ nav h2{font-size: 18px; font-weight: 500;}
 .gnb .sub-menu > li:hover{color: #f82020; font-weight: 500;}
 
 
+.mobile-hamburger{display: none;}
+
+
 /* .gnb .main-menu:hover .sub-menu{display: block;} */
 
 
 /* --------------------HeaderEnd------------- */
 
-.mobile-hamburger{display: none;}
 
 
 
@@ -211,35 +214,69 @@ footer a{color: #1a1a1a;}
   .mobile-hamburger{
     display: block;
     width: 300px;
-    position: absolute;
-    top: 20px; left: 0;
+    position: fixed;
+    top: 0; left: 0;
+    pointer-events: none;
+  }
+
+  
+  .mobile-hamburger-top{
+    display: flex; gap: 20px; align-items: center;
+    width: 100%; height: 80px;
     padding-left: 20px;
+    position: relative;
+  }
+
+
+
+  .mobile-hamburger-top-bg.on{
+    transform: translateX(0);
+  }
+
+
+  .mobile-hamburger-top img{height: 25px; cursor: pointer;}
+  
+  
+  
+  .mobile-hamburger-inner{
+    width: 100%; height: calc(100dvh - 80px);
+    padding-left: 20px;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    transition: all 0.3s;
     background-color: #e7e7e7;
   }
-/* 
-  .mobile-hamburger-inner{
-    position: relative;
-    left: -100%; display: none;
-  } */
 
 
-  .mobile-hamburger-top{display: flex; gap: 20px; align-items: center;}
-  .mobile-hamburger-top img{height: 25px;}
+  .mobile-hamburger-inner.open{
+    transform: translateX(0);
+  }
 
   .login-wrap{
-    margin: 20px 0;
+    padding: 20px 0;
   }
 
   .login-wrap img{width: 30px; margin-right: 20px; padding-top: 3px;}
+  .login-wrap li:nth-child(2) img{margin-right: 15px; padding-left: 5px;}
+
 
   .mobile-gnb{
     display: block;
-    margin-top: 10px;
   }
 
-  .mobile-gnb .sub-menu{display: none;}
+  .mobile-gnb .mobile-main-menu .sub-menu{display: none;}
 
 
+  .member-reward {
+    position: absolute;
+    left: 20px; bottom: 0;
+  }
+
+
+  .mobile-hamburger-top,
+  .mobile-hamburger-inner.open {
+    pointer-events: auto;
+  }
 
 
   

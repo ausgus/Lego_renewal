@@ -1,4 +1,6 @@
 $(document).ready(function(){
+  
+  //------------PC Header------------
   $('.main-menu').mouseenter(function () { 
     $('.sub-menu').stop().slideDown();
     $('.header-bg').stop().slideDown();
@@ -10,7 +12,14 @@ $(document).ready(function(){
   });
 
 
-  $('.mobile-hamburger').click(function () { 
-    $('.mobile-hamburger-inner').stop().animate({left: 0})
+
+  //------------------Mobile Header-------------
+  $('.mobile-hamburger-top img').click(function () { 
+    $('.mobile-hamburger-top-bg').toggleClass('on');
   });
+
+  $('.mobile-hamburger-top img').click(function () { 
+    $('.mobile-hamburger-inner').toggleClass('open');
+  });
+
 });

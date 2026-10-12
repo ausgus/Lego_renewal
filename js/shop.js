@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+// --------------productsList---------------
+
 const products = [
   {
     name: 'Oracle Red Bull Racing RB20 <br> F1 레이스 카',
@@ -136,6 +148,35 @@ categoryBtns.forEach(function(btn){
     const selectedCategory = this.dataset.category;
 
     categoryBtns.forEach(function(btn){
+      btn.classList.remove('active');
+    });
+    
+    this.classList.add('active');
+    
+    
+    if (selectedCategory === 'all') {
+      displayProducts(products);
+    } else {
+      const filteredproducts = products.filter(function(product){
+        return product.category.includes(selectedCategory); 
+      });
+      
+      
+      displayProducts(filteredproducts);
+    };
+
+  });
+    
+});
+
+
+const mobileCategoryBtns = document.querySelectorAll('.mobile-category-list button');
+
+mobileCategoryBtns.forEach(function(btn){
+  btn.addEventListener('click', function(){
+    const selectedCategory = this.dataset.category;
+
+    mobileCategoryBtns.forEach(function(btn){
       btn.classList.remove('active');
     });
     
