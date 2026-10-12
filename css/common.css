@@ -201,7 +201,7 @@ footer a{color: #1a1a1a;}
 
 /* ------------Tablet Version------------ */
 
-@media (max-width: 1024px) {
+@media (max-width: 786px) {
   
   .header-wrap{
     width: 100%;
