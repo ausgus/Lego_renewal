@@ -95,12 +95,12 @@ const products = [
     img: 'images/vehicle/car_FastandFuriousDodgeChargerR:T.png'
   },
 
-  {
-    name: "",
-    category: ['architech'],
-    price: 0,
-    img: 'images/architech/'
-  },
+  // {
+  //   name: "",
+  //   category: ['architech'],
+  //   price: 0,
+  //   img: 'images/architech/'
+  // }
 
 ];
 
