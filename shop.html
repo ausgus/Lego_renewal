@@ -20,15 +20,10 @@
   <script src="js/common.js"></script>
   <script>
     $(document).ready(function () {
-      $('.main-category').mouseenter(function () { 
-        $(this).parent().next('.sub-category').stop().slideDown(300);
+      $('.main-category').click(function () { 
+        $(this).parent().next('.sub-category').stop().slideToggle(300);
       });
 
-
-      $('.category-list > li').mouseleave(function () { 
-        $('.sub-category').stop().slideUp(300);
-      });
-  
     });
   </script>
 
@@ -40,10 +35,67 @@
 
   <header>
     <div class="header-bg"></div>
+
+    <div class="pc-hamburger-inner">
+      <ul class="account">
+        <li>
+          <ul class="login-wrap">
+            <li><h2><a href="#"><img src="images/legoHead.png" alt="loging">로그인 / 회원가입</a></h2></li>
+            <li><h2><a href="#"><img src="images/icon-truck.png" alt="delevery">주문현황</a></h2></li>
+          </ul>
+        </li>
+      </ul>
+
+
+
+      <ul class="pc-member-reward">
+        <li>
+          <ul>
+            <li><img src="images/icon-point.png" alt="point"></li>
+            <li>
+              <h2><a href="#">포인트 적립</a></h2>
+              <p>구매 시 <em>포인트</em>를 적립하고,<br><em>포인트</em>를 사용해 할인을 받아보세요.</p>
+            </li>
+          </ul>
+          
+        </li>
+
+        <li>
+          <ul>
+            <li><a href="#"><img src="images/icon-reword.png" alt="reword"></a></li>
+            <li>
+              <h2>회원 전용 리워드 교환</h2>
+              <p>소장용 제품, 다양한 경험, 디지털 다운로드 등<br><em>다채로운 리워드</em>를 만나보세요.</p>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul>
+            <li><a href="#"><img src="images/icon-gift.png" alt="gift"></a></li>
+            <li>
+              <h2><a href="#">구매 시 선물 증정</a></h2>
+              <p>회원에 한해 구매 시 증정되는 <em>선물</em>을 만나보세요.</p>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <ul>
+            <li><img src="images/icon-firstOrder.png" alt="firstOrder"></li>
+            <li>
+              <h2><a href="#">선주문 혜택 </a></h2>
+              <p>가장 먼저 <em>신규 세트</em>를 조립해 보세요.</p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
     <div class="header-wrap">
       <div class="mobile-hamburger">
         <div class="mobile-hamburger-top">
-          <div class="mobile-hamburger-top-bg"></div>
+          <!-- <div class="mobile-hamburger-top-bg"></div> -->
           <img src="images/Icon-hamburger.png" alt="햄버거 메뉴">
           <h2>LEGO® <em>Insiders</em></h2>
         </div>
@@ -114,17 +166,19 @@
 
 
       <ul class="etc">
-        <li class="hamburger">
+        <li class="pc-hamburger">
           <img src="images/Icon-hamburger.png" alt="햄버거 메뉴">
         </li>
 
-        <li class="search">
-          <img src="images/icon-search.png" alt="검색 아이콘">
+        <li class="search-wrap">
+          <label for="search">
+            <input type="text" name="search" id="search"><img src="images/icon-search.png" alt="검색 아이콘">
+          </label>
         </li>
       </ul>
 
       
-      <h1 class="logo"><img src="images/logo-header.jpg" alt="logo"></h1>
+      <h1 class="logo"><a href="index.html"><img src="images/logo-header.jpg" alt="logo"></a></h1>
 
 
       <nav>
@@ -176,7 +230,6 @@
 
     </div>
   </header>
-
   <!-- -------------Header End---------------------- -->
 
 
@@ -198,19 +251,18 @@
 
 
         <li>
-          <h1><button data-category="Vehicle" class="main-category">Vehicle</button></h1>
+          <h1><button data-category="vehicle" class="main-category">Vehicle</button></h1>
           <ul class="sub-category">
             <li><button data-category="F1">F1</button></li>
-            <li><button data-category="Lamborghini">Lamborghini</button></li>
-            <li><button data-category="LandRover">Land Rover</button></li>
-            <li><button data-category="McLare¬n">McLaren</button></li>
+            <li><button data-category="car">Car</button></li>
+            <li><button data-category="motorCycle">Motor Cycle</button></li>
           </ul>
         </li>
 
 
 
         <li>
-          <h1><button data-category="Architech" class="main-category">Architech</button></h1>
+          <h1><button data-category="architech" class="main-category">Architech</button></h1>
           <ul class="sub-category">
             <li><button data-category="F1">F1</button></li>
             <li><button data-category="Lamborghini">Lamborghini</button></li>
@@ -222,13 +274,13 @@
 
 
         <li>
-          <h1><button data-category="Art" class="main-category">Art</button></h1>
+          <h1><button data-category="art" class="main-category">Art</button></h1>
         </li>
 
 
 
         <li>
-          <h1><button data-category="Collection" class="main-category">Collection</button></h1>
+          <h1><button data-category="collection" class="main-category">Collection</button></h1>
           <ul class="sub-category">
             <li><button data-category="F1">animation</button></li>
             <li><button data-category="Lamborghini">Movie / Series</button></li>
@@ -247,25 +299,25 @@
   
   
           <li>
-            <h1><button data-category="Vehicle" class="main-category">Vehicle</button></h1>
+            <h1><button data-category="vehicle" class="main-category">Vehicle</button></h1>
           </li>
   
   
   
           <li>
-            <h1><button data-category="Architech" class="main-category">Architech</button></h1>
+            <h1><button data-category="architech" class="main-category">Architech</button></h1>
           </li>
   
   
   
           <li>
-            <h1><button data-category="Art" class="main-category">Art</button></h1>
+            <h1><button data-category="art" class="main-category">Art</button></h1>
           </li>
   
   
   
           <li>
-            <h1><button data-category="Collection" class="main-category">Collection</button></h1>
+            <h1><button data-category="collection" class="main-category">Collection</button></h1>
           </li>
         </ul>
       </div>

@@ -12,95 +12,95 @@
 
 const products = [
   {
-    name: 'Oracle Red Bull Racing RB20 <br> F1 레이스 카',
-    category: ['Vehicle', 'F1'],
+    name: 'Oracle Red Bull<br>Racing RB20 F1 레이스 카',
+    category: ['vehicle', 'F1'],
     price: 319000,
-    img: 'images/vehicle/car.png'
+    img: 'images/vehicle/F1_OracleRedBullRacingRB20F1.png'
   },
   
   {
-    name: 'Ducati Desmo450 <br> 모터사이클',
-    category: ['Vehicle', 'motorCycle'],
+    name: 'Ducati Desmo450 <br>MX Factory 모터사이클',
+    category: ['vehicle', 'motorCycle'],
     price: 78900,
-    img: 'images/vehicle/motorCycle_DucatiDesmo450.png'
+    img: 'images/vehicle/motorCycle_DucatiDesmoMXFactory450.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
+    name: 'Kawasaki Ninja H2R <br>모터사이클',
+    category: ['vehicle', 'motorCycle'],
+    price: 114900,
+    img: 'images/vehicle/motorCycle_KawasakiNinjaH2R.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
+    name: 'McLaren P1™',
+    category: ['vehicle', 'McLaren'],
+    price: 599900,
+    img: 'images/vehicle/car_McLarenP1.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
+    name: "Koenigsegg Sadair's<br>Spear Megacar",
+    category: ['vehicle', 'car'],
+    price: 300000,
+    img: 'images/vehicle/car_KoenigseggSadairSpearMegacar.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
+    name: "Mercedes-AMG F1<br>W14 E Performance",
+    category: ['vehicle', 'F1'],
+    price: 289900,
+    img: 'images/vehicle/F1_Mercedes-AMGF1W14EPerformance.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
+    name: "Aston Martin Aramco<br>AMR25 F1® 레이스카",
+    category: ['vehicle', 'F1'],
+    price: 339900,
+    img: 'images/vehicle/F1_AstonMartinAramcoAMR25F1.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
+    name: "Ferrari SF-24 F1 레이스 카",
+    category: ['vehicle', 'F1'],
+    price: 319900,
+    img: 'images/vehicle/F1_FerrariSF-24F1.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
+    name: "Ducati Desmo450<br>모터사이클",
+    category: ['vehicle', 'motorCycle'],
+    price: 78900,
+    img: 'images/vehicle/mortorCycle_DucatiDesmo450.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
+    name: "McLaren MCL39 F1® 자동차",
+    category: ['vehicle', 'car'],
+    price: 289900,
+    img: 'images/vehicle/F1_McLarenMCL39F1.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
+    name: "배트맨 2™ 배트모빌™",
+    category: ['vehicle', 'car', 'movie'],
+    price: 319900,
+    img: 'images/vehicle/car_BatmanBatmobile.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
+    name: "Fast and Furious<br>Dodge Charger R/T 자동차",
+    category: ['vehicle', 'car'],
+    price: 229900,
+    img: 'images/vehicle/car_FastandFuriousDodgeChargerR:T.png'
   },
 
   {
-    name: '',
-    category: '',
-    price: '',
-    img: 'images/'
-  }
+    name: "",
+    category: ['architech'],
+    price: 0,
+    img: 'images/architech/'
+  },
 
 ];
 
@@ -116,7 +116,7 @@ function displayProducts(productArray) {
     `;
 
     return;
-  }
+  };
 
   productArray.forEach(function(product){
     productList.innerHTML += `
@@ -158,7 +158,7 @@ categoryBtns.forEach(function(btn){
       displayProducts(products);
     } else {
       const filteredproducts = products.filter(function(product){
-        return product.category.includes(selectedCategory); 
+        return product.category.includes(selectedCategory);
       });
       
       

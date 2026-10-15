@@ -12,14 +12,26 @@ $(document).ready(function(){
   });
 
 
+  $('.pc-hamburger').click(function() {
+    $('.pc-hamburger-inner').toggleClass('open');
+  });
+
+  $('.pc-hamburger-inner').mouseleave(function() {
+    $(this).removeClass('open');
+  })
+
 
   //------------------Mobile Header-------------
-  $('.mobile-hamburger-top img').click(function () { 
-    $('.mobile-hamburger-top-bg').toggleClass('on');
-  });
 
   $('.mobile-hamburger-top img').click(function () { 
     $('.mobile-hamburger-inner').toggleClass('open');
   });
+
+
+  $('.mobile-main-menu a').click(function(e){
+    e.preventDefault();
+    $(this).parent().next().stop().slideToggle();
+  });
+  
 
 });
