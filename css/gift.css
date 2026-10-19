@@ -1,0 +1,359 @@
+@charset "utf-8";
+
+
+h1{color: var(--titWhite);}
+h2{color: var(--regularWhite);}
+p{color: var(--regularWhite);}
+
+header h2 {color: var(--regularBlack);}
+
+/* -------------Main Hero---------------- */
+
+section {
+  width: min(1440px, 90%);
+  margin: 0 auto;
+  margin-top: 300px;
+}
+
+section:first-child{margin-top: 0; width: 100%;}
+
+section:last-child{margin-bottom: 100px;}
+
+
+
+.mainhero-wrap {
+  width: 100%;
+}
+
+
+
+.mainhero li {
+  position: relative;
+  top: 80px;
+}
+
+.mainhero li > img {
+  width: 100%; height: 880px;
+}
+
+.hero-txt-wrap {
+  position: absolute;
+  top: 200px; left:  15.8%;
+}
+
+.hero-txt-wrap h1 {
+  color: var(--titWhite);
+}
+
+.hero-txt-wrap h2 {
+  color: var(--regularWhite);
+  margin: 45px 0 25px;
+}
+
+.hero-btn{
+  font-size: var(--btn);  
+  font-weight: var(--btnWeight);
+  padding: var(--pcBtn);
+  border-radius: var(--btnRadius);
+  width: 190px;
+  box-sizing: border-box;
+  display: flex; align-items: center; justify-content: center;
+  background-color: var(--pointLime);
+}
+
+
+.hero-btn img {
+  width: 20px;  height: 20px;
+  margin-left: 10px;
+  padding-top: 1px;
+}
+
+
+
+
+/* -------------Main Hero End---------------- */
+
+
+
+
+
+
+
+
+/* ---------------------Best-------------------- */
+
+.best-wrap {width: 100%; position: relative;}
+
+.best-top {
+  width: 631px;
+  margin: 0 auto;
+}
+
+.best-top h2 {margin: 16px 0 104px;}
+
+.nav-arrows li{
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+}
+
+
+.nav-arrows li:nth-child(1){left: 10%;}
+.nav-arrows li:nth-child(2){right: 10%;}
+
+
+.best-main {
+  display: flex;
+  justify-content: center; gap: 80px;
+}  
+
+.best-main{margin: 0 auto;}
+
+.best-img {
+  position: relative;
+  transition: all 0.3s;
+}
+
+.best-img:nth-child(2) {
+  transform: scale(1.2);
+}
+
+.card-summary {
+  position: absolute;
+  top: 18px; left: 25px;
+
+  display: flex;
+}
+
+
+.card-summary li{
+  box-sizing: border-box;
+  font-size: 14px; font-weight: 400;  color: #fff;
+  padding: 4px 14px;
+  display: flex; align-items: center;
+  border-radius: 35px;
+}
+
+
+.card-summary li:nth-child(1){background-color: var(--pointRed);}
+.card-summary li:nth-child(2){background-color: #F8CD20; color: var(--regularBlack); margin: 0 5px;}
+.card-summary li:nth-child(3){box-sizing: border-box; border: 3px solid var(--pointLime);}
+
+.card-summary li:nth-child(3) img {transform: translateY(-2px); margin-right: 5px;}
+
+
+.card-btns {
+  position: absolute;
+  top: 450px; right: 25px;
+
+  display: flex; gap: 20px;
+}
+
+.card-btns li {
+  border-radius: 50%;
+  width: 52px;  height: 52px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.card-btns img {padding-top: 15px;}
+
+
+.product-summary {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.product-summary li {
+  margin-bottom: 20px;
+}
+
+
+
+.best-more-btn {
+  width: 300px; box-sizing: border-box;
+
+  margin: 40px auto;
+
+
+  background-color: var(--pointLime);
+  padding: 24px 40px; border-radius: var(--btnRadius);
+
+  display: flex; gap: 10px; align-items: center; justify-content: center;
+}
+
+.best-more-btn h2{color: var(--regularBlack);}
+
+
+/* ---------------------Best End-------------------- */
+
+
+
+
+
+/* ---------------------WhoseGift----------------------- */
+
+
+.whose-gift-tit {text-align: center;}
+
+.whose-gift-tit h1 {margin-bottom: 12px;}
+.whose-gift-category{
+  display: flex; gap: 32px;
+}
+
+
+
+/* ---------------------WhoseGift End----------------------- */
+
+
+
+
+
+
+
+/* --------------------Gift Myself------------------- */
+
+.gift-myself-inner{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+.myself-left li:first-child h2{
+  margin: 30px 0 60px;
+}
+
+.myself-list{
+  width: 600px;
+  display: flex;
+  align-items: center;  gap:40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+
+
+.myself-list li:last-child {
+  position: absolute;
+  top: 50%; right: 0;
+  transform: translateY(-50%);
+}
+
+.myself-list li:last-child::after {
+  content: ''; color: var(--regularBlack);
+  display: block;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+}
+
+.myself-left li:nth-child(2) .myself-list li:last-child::after{content: '1';}
+.myself-left li:nth-child(3) .myself-list li:last-child::after{content: '2';}
+.myself-left li:nth-child(4) .myself-list li:last-child::after{content: '3';}
+.myself-left li:nth-child(5) .myself-list li:last-child::after{content: '4';}
+.myself-left li:nth-child(6) .myself-list li:last-child::after{content: '5';}
+
+
+.myself-right {
+  position: relative;
+  width: 100%; 
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  background-image: url(../images/gift/myself_all.png);
+}
+
+
+.block-num li:nth-child(1) {position: absolute; bottom: 17%; right: 20%;}
+.block-num li:nth-child(2) {position: absolute; top: 47%; left: 58%;}
+.block-num li:nth-child(3) {position: absolute; bottom: 15%; left: 5%;}
+.block-num li:nth-child(4) {position: absolute; top: 33%; left: 27%;}
+.block-num li:nth-child(5) {position: absolute; top: 35%; right: 20%;}
+
+.block-num li{transition: all 0.3s;}
+
+
+.block-num li.big {
+  transform: scale(1.3); font-size: 1.3em;
+}
+
+
+.block-num li p {
+  color: var(--regularBlack);
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+}
+
+/* --------------------Gift Myself End------------------- */
+
+
+
+/* ---------------------Story---------------------- */
+
+
+.story {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 65px;
+}
+
+.story-tit li:nth-child(2) {
+  margin: 27px 0 76px;
+}
+
+
+.story-btn {
+  width: 235px; 
+  padding: 17px 25px; border-radius: var(--btnRadius);
+  font-size: var(--btn); font-weight: var(--btnWeight);
+  border: 2px solid var(--pointLime);
+  color: var(--pointLime);
+  display: flex; justify-content: center;
+
+  cursor: pointer;
+}
+
+.story-btn img {padding-top: 4px;}
+
+
+.story-right {
+  width: 100%;
+  aspect-ratio: 914 / 628;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/gift/story_effeltop.png);
+  position: relative; cursor: pointer;
+}
+
+.cont-tit {
+  position: absolute;
+  left: 10%; top: 10%; 
+  color: var(--titWhite);
+  font-size: 36px;  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cont-tit::before {
+  content: ''; display: block;
+  position: absolute;
+  top: 5px; left: -10px;
+  width: 4px; height: 77px;
+  background-color: var(--titWhite);
+}
+
+.play-btn {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* ---------------------Story---------------------- */
+
+

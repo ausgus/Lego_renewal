@@ -2,13 +2,13 @@ $(document).ready(function(){
   
   //------------PC Header------------
   $('.main-menu').mouseenter(function () { 
-    $('.sub-menu').stop().slideDown();
-    $('.header-bg').stop().slideDown();
+    $('.sub-menu').stop().slideDown(300);
+    $('.header-bg').stop().slideDown(300);
   });
 
   $('header').mouseleave(function () { 
-    $('.sub-menu').stop().slideUp();
-    $('.header-bg').stop().slideUp();
+    $('.sub-menu').stop().slideUp(300);
+    $('.header-bg').stop().slideUp(300);
   });
 
 

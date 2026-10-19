@@ -4,8 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gift</title>
+
+  <!-- ---------webFont--------- -->
+  <link rel="precon nect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <!-- ------------------------------------- -->
+  
   <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
   <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/gift.css">
+
+  <script src="js/common.js" defer></script>
+  <script src="js/gift.js" defer></script>
   
 </head>
 <body>
@@ -224,16 +235,142 @@
 
   <main>
     <!-- ---------------MainHero--------------- -->
-    <ul class="mainhero">
-      <li>
-        <img src="images/gift/gift_mainhero1.png" alt="mainhero1">
-        <h1>당신의 취향을<br>조립해 선물하세요</h1>
-        <h2>소중한 사람에게 혹은 지금의 나에게<br>레고와 함께하는 소중한 순간을 선물하세요</h2>
-        <div class="hero-btn"><a href="#">선물찾기 <img src="images/icon-rightArrow.png" alt="arrow"></a></div>
-      </li>
-    </ul>
+    <section class="mainhero-wrap">
+      <ul class="mainhero">
+        <li>
+          <img src="images/gift/hero_mainimg.png" alt="mainhero1">
+          <div class="hero-txt-wrap">
+            <h1>당신의 취향을<br>조립해 선물하세요</h1>
+            <h2>소중한 사람에게 혹은 지금의 나에게<br>레고와 함께하는 소중한 순간을 선물하세요</h2>
+            <div class="hero-btn"><a href="#">선물찾기<img src="images/icon-rightArrow.png" alt="arrow"></a></div> 
+          </div>
+        </li>
+      </ul>
+    </section>
 
     <!-- ----------------------MainHeroEnd----------------------- -->
+
+
+
+
+
+
+
+
+
+
+    <!-- ---------------------Best-------------------- -->
+
+    <section class="best-wrap">
+
+      <div class="best-top">
+        <h1>지금 가장 잘 나가는 <em>인기</em> 상품들</h1>
+        <h2>많은 사람들의 사랑을 받은 인기 제품을 지금 바로 만나보세요.</h2>
+      </div>
+
+
+      <ul class="nav-arrows">
+        <li><img class="prev-btn" src="images/gift/best_left-arrow.png" alt="prev"></li>
+        <li><img class="next-btn" src="images/gift/best_right-arrow.png" alt="next"></li>
+      </ul>
+
+      <ul>
+        
+
+        <ul class="best-main">
+          
+          <li class="best-img">
+            <img src="images/gift/best_WallaceGromit.png" alt="best">
+            <ul class="card-summary">
+              <li>®테크닉</li>
+              <li>18+</li>
+              <li><img src="images/icon-block-count.png" alt="icon-block-count">1048</li>
+            </ul>
+
+            <ul class="card-btns">
+              <li><img src="images/icon-cart.png" alt="장바구니"></li>
+              <li><img class="heart" src="images/icon-heart.png" alt="찜하기"></li>
+            </ul>
+
+            <ul class="product-summary">
+              <li><h2>Wallace & Gromit</h2></li>
+              <li><p>159,900 원</p></li>
+            </ul>
+          </li>
+
+          
+          
+          <li class="best-img">
+            <img src="images/gift/best_koenigsegg.png" alt="best">
+            <ul class="card-summary">
+              <li>®테크닉</li>
+              <li>18+</li>
+              <li><img src="images/icon-block-count.png" alt="icon-block-count">4104</li>
+            </ul>
+
+            <ul class="card-btns">
+              <li><img src="images/icon-cart.png" alt="장바구니"></li>
+              <li><img class="heart" src="images/icon-heart.png" alt="찜하기"></li>
+            </ul>
+
+            <ul class="product-summary">
+              <li><h2>Koenigsegg Sadair's Spear Megacar</h2></li>
+              <li><p>679,900 원</p></li>
+            </ul>
+
+            <ul class="best-more-btn">
+              <li><h2>인기 상품 보러가기</h2></li>
+              <li><img src="images/icon-rightArrow.png" alt="arrow"></li>
+            </ul>
+          </li>
+
+          
+          <li class="best-img">
+            <img src="images/gift/best_BeautyAndTheBeast.png" alt="best">
+            <ul class="card-summary">
+              <li>®테크닉</li>
+              <li>18+</li>
+              <li><img src="images/icon-block-count.png" alt="icon-block-count">2916</li>
+            </ul>
+
+            <ul class="card-btns">
+              <li><img src="images/icon-cart.png" alt="장바구니"></li>
+              <li><img class="heart" src="images/icon-heart.png" alt="찜하기"></li>
+            </ul>
+            
+            <ul class="product-summary">
+              <li><h2>미녀와 야수의 성</h2></li>
+              <li><p>389,900 원</p></li>
+            </ul>
+            
+          </li>
+
+
+        </ul>
+
+      </ul>
+
+
+      
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ---------------------BestEnd-------------------- -->
+
+
+
+
+
+
+
+
+
 
 
 
@@ -245,12 +382,15 @@
     <section class="whose-gift">
       <div class="whose-gift-tit">
         <h1>누구에게 줄 <em>선물</em>을 찾고 계신가요?</h1>
-        <p>선물할 대상이나 좋아할만한 취향을 찾아보세요</p>
+        <h2>선물할 대상이나 좋아할만한 취향을 찾아보세요</h2>
       </div>
 
 
       <ul class="whose-gift-category">
-        <li></li>
+        <li><img src="images/gift/whose_family.png" alt="가족선물"></li>
+        <li><img src="images/gift/whose_me.png" alt="나에게선물"></li>
+        <li><img src="images/gift/whose_couple.png" alt="연인선물"></li>
+        <li><img src="images/gift/whose_friends.png" alt="친구/동료선물"></li>
       </ul>
     </section>
 
@@ -264,13 +404,155 @@
 
     <!-- --------------------Gift Myself------------------- -->
 
-    
+    <section class="gift-myself">
+
+      <div class="gift-myself-inner">
+        <ul class="myself-left">
+          <li>
+            <h1><em>어른</em>이 된 나에게<br>주는 선물</h1>
+            <h2>어릴 적보다 꿈 많은 나를 위한 레고를 선물할 시간입니다.</h2>
+          </li>
+
+          <li>
+            <ul class="myself-list">
+              <li><a href="https://www.lego.com/ko-kr/product/oracle-red-bull-racing-rb20-f1-car-42206" target="_blank"><img src="images/gift/myself_f1.png" alt="f1"></a></li>
+
+              <li>
+                <h2><a href="https://www.lego.com/ko-kr/product/oracle-red-bull-racing-rb20-f1-car-42206" target="_blank">Oracle Red Bull Racing RB20<br>F1 레이스 카</a></h2>
+                <p>319,900 원</p>
+              </li>
+
+              <li><img src="images/gift/myself_blockNum.png" alt="number"></li>
+            </ul>
+          </li>
 
 
+
+          <li>
+            <ul class="myself-list">
+              <li><a href="https://www.lego.com/ko-kr/product/gustav-klimt-the-kiss-31221" target="_blank"><img src="images/gift/myself_art.png" alt="art"></a></li>
+
+              <li>
+                <h2><a href="https://www.lego.com/ko-kr/product/gustav-klimt-the-kiss-31221" target="_blank">아트: Gustav Klimt - 키스</a></h2>
+                <p>449,900 원</p>
+              </li>
+
+              <li><img src="images/gift/myself_blockNum.png" alt="number"></li>
+            </ul>
+          </li>
+
+
+
+          <li>
+            <ul class="myself-list">
+              <li><a href="#" target="_blank"><img src="images/gift/myself_flower.png" alt="flower"></a></li>
+
+              <li>
+                <h2><a href="#" target="_blank">시들지 않는 꽃 보태니컬 컬렉션:<br>핑크 꽃다발</a></h2>
+                <p>79,900 원</p>
+              </li>
+              
+              <li><img src="images/gift/myself_blockNum.png" alt="number"></li>
+            </ul>
+          </li>
+
+
+
+          <li>
+            <ul class="myself-list">
+              <li><a href="https://www.lego.com/ko-kr/product/venusaur-charizard-and-blastoise-72153" target="_blank"><img src="images/gift/myself_pokemon.png" alt="pokemon"></a></li>
+
+              <li>
+                <h2><a href="https://www.lego.com/ko-kr/product/venusaur-charizard-and-blastoise-72153" target="_blank">포켓몬: 이상해꽃, 리자몽, 거북왕</a></h2>
+                <p>949,900 원</p>
+              </li>
+              
+              <li><img src="images/gift/myself_blockNum.png" alt="number"></li>
+            </ul>
+          </li>
+
+
+
+          <li>
+            <ul class="myself-list">
+              <li><a href="https://www.lego.com/ko-kr/product/tudor-corner-10350" target="_blank"><img src="images/gift/myself_architech.png" alt="architech"></a></li>
+
+              <li>
+                <h2><a href="https://www.lego.com/ko-kr/product/tudor-corner-10350" target="_blank">레고®아이콘: 튜더 코너</a></h2>
+                <p>309,900 원</p>
+              </li>
+              
+              <li><img src="images/gift/myself_blockNum.png" alt="number"></li>
+            </ul>
+          </li>
+
+        </ul>
+
+        <div class="myself-right">
+          <ul class="block-num">
+            <li><a href="https://www.lego.com/ko-kr/product/oracle-red-bull-racing-rb20-f1-car-42206" target="_blank"><img src="images/gift/myself_blockNum.png" alt="number"><p>1</p></a></li>
+
+            <li><a href="https://www.lego.com/ko-kr/product/gustav-klimt-the-kiss-31221" target="_blank"><img src="images/gift/myself_blockNum.png" alt="number"><p>2</p></a></li>
+
+            <li><a href="https://www.lego.com/ko-kr/product/bouquet-of-pink-roses-10374"><img src="images/gift/myself_blockNum.png" alt="number"><p>3</p></a></li>
+
+            <li><a href="https://www.lego.com/ko-kr/product/venusaur-charizard-and-blastoise-72153" target="_blank"><img src="images/gift/myself_blockNum.png" alt="number"><p>4</p></a></li>
+
+            <li><a href="https://www.lego.com/ko-kr/product/tudor-corner-10350" target="_blank"><img src="images/gift/myself_blockNum.png" alt="number"><p>5</p></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
 
 
     <!-- --------------------Gift Myself End------------------- -->
+
+
+
+
+
+
+
+
+
+  <!-- ---------------------Story---------------------- -->
+  
+  <section class="story">
+    <ul class="story-tit">
+      <li><h1>레고에 <em>빠진</em> 사람들의 이야기</h1></li>
+      <li>
+        <h2>
+          어른이 된 지금도, 우리는 왜 레고를 만들까요?<br>
+          레고 크리에이터들이 전하는 레고에 대한 진심<br>
+          어린 이야기를 만나보세요.
+        </h2>
+      </li>
+
+      <li class="story-btn">
+        <p>영상보러가기 <img src="images/icon-limeArrow.png" alt="arrow"></p>
+      </li>
+    </ul>
+
+    
+    <div class="story-right">
+      <div class="cont-tit">
+        LEGO, 시간이 흘러도<br>사랑받는 이유
+      </div>
+      <div class="play-btn"><img src="images/gift/story_play.png" alt="play"></div>
+    </div>
+
+  </section>
+  
+  
+  
+  
+  
+  
+  <!-- ---------------------Story End---------------------- -->
+
+
+
 
   </main>
 
@@ -363,6 +645,5 @@
   <!-- -----------------FooterEnd----------------- -->
 
 
-  <script src="js/common.js"></script>
 </body>
 </html>
