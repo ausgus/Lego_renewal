@@ -270,7 +270,7 @@ const products = [
   },
 
   {
-    name: "해리포터 호그와트™ 성",
+    name: "해리포터 호그와트성",
     category: ['collection', 'movie'],
     block: 6020,
     price: 640000,

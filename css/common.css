@@ -5,7 +5,7 @@
   --title1: clamp(16px, 4.2vw, 48px);
   --title2: clamp(16px, 2.2vw, 24px);
   --regular: clamp(12px, 1.2vw, 18px);
-  --btn: clamp(16px, 2.2vw, 24px);
+  --btn: clamp(16px, 1.6vw, 24px);
   --sectionTitle: clamp(16px, 4.2vw, 32px);
   --footerTitle: clamp(16px, 7.7vw, 30px);
 
@@ -115,14 +115,16 @@ header{
   top: 80px; left: 0;
   box-sizing: border-box;
 
-  padding-left: clamp(20px, 10vw, 180px);
+  padding-left: clamp(20px, 5vw, 70px);
   transform: translateX(-100%);
+  visibility: hidden;
   transition: all 0.3s;
 }
 
 
 .pc-hamburger-inner.open{
   transform: translateX(0%);
+  visibility: visible;
 }
 
 
@@ -152,7 +154,8 @@ header{
 
 .pc-member-reward {
   position: absolute;
-  left: 220px; bottom: 40px;
+  left: 0; bottom: 40px;
+  padding-left: clamp(20px, 5vw, 70px);
 }
 
 
@@ -209,7 +212,7 @@ header{
 
 
 .pc-hamburger{
-  padding-top: 2.3%;
+  padding-top: 16px;
   cursor: pointer;
 }
 

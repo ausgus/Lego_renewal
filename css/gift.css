@@ -223,20 +223,29 @@ section:last-child{margin-bottom: 100px;}
   box-sizing: border-box;
   border-radius: var(--btnRadius);
   background-color: var(--pointLime);
+  color: var(--regularBlack);
   cursor: pointer;
 }
 
 
-.best-more-btn h2{font-size: var(--btn); color: var(--regularBlack);}
+.best-more-btn h2{font-size: var(--btn); color: inherit;}
 
 
 .best-more-btn img{width: 20px; height: 20px;}
 
 
-.best-more-btn:hover{background-color: #647300;}
+.best-more-btn:hover{background-color: #647300; color: var(--titWhite);}
+
+
+
+
 
 
 /* --------------------Whose Gift-------------------- */
+
+
+
+
 .whose-gift-tit{text-align: center;}
 
 
@@ -257,7 +266,6 @@ section:last-child{margin-bottom: 100px;}
 .whose-gift-category li{min-width: 0;}
 
 
-.whose-gift-category img{display: block; width: 100%;}
 
 
 /* --------------------Gift Myself-------------------- */
@@ -398,10 +406,16 @@ section:last-child{margin-bottom: 100px;}
 }
 
 
-.story-btn p{display: flex; align-items: center; gap: 10px; color: var(--pointLime);}
+.story-btn p{display: flex; align-items: center; gap: 10px; color: inherit;}
 
 
 .story-btn img{width: 20px; height: 20px;}
+
+
+.story-btn:hover {
+  border: 2px solid #647300; background-color: #647300;
+  color: var(--titWhite);
+}
 
 
 .story-right{
@@ -420,7 +434,11 @@ section:last-child{margin-bottom: 100px;}
 .cont-tit::before{content: ''; position: absolute; top: 4px; left: -12px; width: 3px; height: 70px; background-color: var(--titWhite);}
 
 
-.play-btn{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.play-btn{
+  position: absolute; top: 50%; left: 50%; 
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
 
 
 .play-btn img{display: block; width: 70px; height: 70px; object-fit: contain;}
