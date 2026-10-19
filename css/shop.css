@@ -1,7 +1,12 @@
 @charset "utf-8";
 button{color: inherit; cursor: pointer;}
+
+
 body{color: #d3d3d3;}
+
+
 h1{color: #eaeaea;}
+
 
 .content-wrap{
   width: 85%; margin: 120px auto;
@@ -9,7 +14,9 @@ h1{color: #eaeaea;}
   grid-template-columns: 200px 1fr;
 }
 
+
 .mobile-category-list-wrap{display: none;}
+
 
 .category-list{
   width: 100%;
@@ -17,19 +24,20 @@ h1{color: #eaeaea;}
   gap: 20px;
 }
 
+
 .sub-category{
   line-height: 1.7; margin-top: 20px;
   display: none;
 }
 
 
-/* .category-list > li:hover .sub-category{display: block;} */
-
 .category-list button.active,
 .mobile-category-list button.active{color: #D7FA24;}
 
+
 .category-list button:hover,
 .mobile-category-list button:hover{color: #D7FA24;}
+
 
 #productList{
   width: 100%;
@@ -38,21 +46,61 @@ h1{color: #eaeaea;}
   gap: 20px; 
 }
 
-.empty {
-  font-size: 20px;
-}
-
 
 .productCard{
-  width: 100%;
-  max-width: 300px; max-height: 400px;
+  width: 300px; height: 400px;
   box-sizing: border-box;
   border-radius: 10px;
   display: flex; flex-direction: column;
   align-items: flex-end; justify-content: center;
   padding: 20px 40px;
   background-color: #1a1a1a;
-} 
+
+  position: relative;
+}
+
+
+.productCard a {
+    display: block;
+}
+
+
+.productCard a img {
+    cursor: pointer;
+}
+
+
+.productCard ul {
+  position: absolute;
+  top: 5%; left: 10%;
+  display: flex;
+  gap: 10px;
+}
+
+
+.productCard ul li{
+  display: flex; align-items: center;
+  padding: 3px 9px;
+  border: 1.5px solid #D7FA24; border-radius: 20px;
+  background-color: var(--pointLime);
+  color: #000;
+}
+
+
+.productCard ul li:nth-child(2){
+  display: flex;
+  background-color: inherit;
+  color: #eaeaea;
+}
+
+
+.block-count {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
 
 .productImg{
   width: 220px; height: 280px;
@@ -60,7 +108,15 @@ h1{color: #eaeaea;}
   transition: all 0.3s;
 }
 
-.productCard:hover img{transform: scale(1.1);}
+
+.productCard:hover >img{transform: scale(1.1);}
+
+
+.productName {margin-bottom: 8px;}
+
+
+.productPrice {margin-top: 0;}
+
 
 .productName,
 .productPrice{
@@ -69,26 +125,150 @@ h1{color: #eaeaea;}
 }
 
 
-@media (max-width:786px) {
+@media (max-width:1600px) {
+  #productList{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+
+}
+
+
+@media (max-width:1300px) {
+  #productList{
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 40px;
+  }
+
+
+}
+
+
+@media (max-width:1100px) {
   .content-wrap{
     display: flex; flex-direction: column;
   }
 
+
   .mobile-category-list-wrap{display: block;}
+
+
   .category-list{display: none;}
+
 
   .mobile-category-list{
     width: 100%;
-    display: flex; gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 20px;
+    align-items: center;
     justify-content: center;
   }
+
 
   .mobile-category-list h1{
     font-size: 2rem;
     text-align: center;
   }
 
+
   #productList{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-left: 0;
   }
+
+
+  .productCard{
+    width: 100%;
+    max-width: 300px;
+    min-width: 0;
+    justify-self: center;
+    padding: 20px clamp(16px, 3vw, 40px);
+  }
+
+
+  .productImg{
+    max-width: 100%;
+  }
+
+
+}
+
+
+@media (max-width:835px) {
+    #productList{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+
+}
+
+
+/* ------------Mobile Version------------ */
+@media (max-width:600px) {
+  .content-wrap{
+    width: 92%;
+    margin: 110px auto 60px;
+    gap: 32px;
+  }
+
+
+  .mobile-category-list{
+    gap: 12px;
+  }
+
+
+  .mobile-category-list h1{
+    font-size: 18px;
+  }
+
+
+  #productList{
+    gap: 12px;
+  }
+
+
+  .productCard{
+    height: 300px;
+    padding: 16px 10px;
+  }
+
+
+  .productCard ul{
+    left: 8%;
+    gap: 4px;
+  }
+
+
+  .productCard ul li{
+    padding: 3px 5px;
+    font-size: 10px;
+  }
+
+
+  .block-count{
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+  }
+
+
+  .productImg{
+    width: 100%;
+    height: 170px;
+  }
+
+
+  .productName{
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+
+  .productPrice{
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+
 }

@@ -6,6 +6,7 @@ $(document).ready(function(){
     $('.header-bg').stop().slideDown(300);
   });
 
+
   $('header').mouseleave(function () { 
     $('.sub-menu').stop().slideUp(300);
     $('.header-bg').stop().slideUp(300);
@@ -15,6 +16,7 @@ $(document).ready(function(){
   $('.pc-hamburger').click(function() {
     $('.pc-hamburger-inner').toggleClass('open');
   });
+
 
   $('.pc-hamburger-inner').mouseleave(function() {
     $(this).removeClass('open');
@@ -32,6 +34,6 @@ $(document).ready(function(){
     e.preventDefault();
     $(this).parent().next().stop().slideToggle();
   });
-  
+
 
 });

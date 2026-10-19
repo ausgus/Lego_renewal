@@ -12,14 +12,16 @@
 
 const products = [
   {
-    name: 'Oracle Red Bull<br>Racing RB20 F1 레이스 카',
+    name: 'Oracle Red Bull<br>Racing RB20 F1<br>레이스 카',
+    block: 1639,
     category: ['vehicle', 'F1'],
     price: 319000,
     img: 'images/vehicle/F1_OracleRedBullRacingRB20F1.png'
   },
   
   {
-    name: 'Ducati Desmo450 <br>MX Factory 모터사이클',
+    name: 'Ducati Panigale V4S<br>모터사이클',
+    block: 1603,
     category: ['vehicle', 'motorCycle'],
     price: 78900,
     img: 'images/vehicle/motorCycle_DucatiDesmoMXFactory450.png'
@@ -27,6 +29,7 @@ const products = [
 
   {
     name: 'Kawasaki Ninja H2R <br>모터사이클',
+    block: 643,
     category: ['vehicle', 'motorCycle'],
     price: 114900,
     img: 'images/vehicle/motorCycle_KawasakiNinjaH2R.png'
@@ -34,6 +37,7 @@ const products = [
 
   {
     name: 'McLaren P1™',
+    block: 3893,
     category: ['vehicle', 'McLaren'],
     price: 599900,
     img: 'images/vehicle/car_McLarenP1.png'
@@ -41,6 +45,7 @@ const products = [
 
   {
     name: "Koenigsegg Sadair's<br>Spear Megacar",
+    block: 4104,
     category: ['vehicle', 'car'],
     price: 300000,
     img: 'images/vehicle/car_KoenigseggSadairSpearMegacar.png'
@@ -48,20 +53,23 @@ const products = [
 
   {
     name: "Mercedes-AMG F1<br>W14 E Performance",
+    block: 1643,
     category: ['vehicle', 'F1'],
     price: 289900,
     img: 'images/vehicle/F1_Mercedes-AMGF1W14EPerformance.png'
   },
 
   {
-    name: "Aston Martin Aramco<br>AMR25 F1® 레이스카",
+    name: "Aston Martin Aramco AMR25 F1®<br>레이스카",
+    block: 1547,
     category: ['vehicle', 'F1'],
     price: 339900,
     img: 'images/vehicle/F1_AstonMartinAramcoAMR25F1.png'
   },
 
   {
-    name: "Ferrari SF-24 F1 레이스 카",
+    name: "Ferrari SF-24 F1<br>레이스 카",
+    block: 1361,
     category: ['vehicle', 'F1'],
     price: 319900,
     img: 'images/vehicle/F1_FerrariSF-24F1.png'
@@ -69,6 +77,7 @@ const products = [
 
   {
     name: "Ducati Desmo450<br>모터사이클",
+    block: 457,
     category: ['vehicle', 'motorCycle'],
     price: 78900,
     img: 'images/vehicle/mortorCycle_DucatiDesmo450.png'
@@ -76,6 +85,7 @@ const products = [
 
   {
     name: "McLaren MCL39 F1® 자동차",
+    block: 1675,
     category: ['vehicle', 'car'],
     price: 289900,
     img: 'images/vehicle/F1_McLarenMCL39F1.png'
@@ -83,13 +93,15 @@ const products = [
 
   {
     name: "배트맨 2™ 배트모빌™",
-    category: ['vehicle', 'car', 'collection', 'movie'],
+    block: 2269,
+    category: ['vehicle', 'car', 'movie'],
     price: 319900,
     img: 'images/vehicle/car_BatmanBatmobile.png'
   },
 
   {
     name: "Fast and Furious<br>Dodge Charger R/T 자동차",
+    block: 3893,
     category: ['vehicle', 'car'],
     price: 229900,
     img: 'images/vehicle/car_FastandFuriousDodgeChargerR:T.png'
@@ -152,7 +164,7 @@ const products = [
   },
 
   {
-    name: "뉴욗티: 빅 애플",
+    name: "뉴욕시티: 빅 애플",
     category: ['architech'],
     block: 1465,
     price: 219900,
@@ -174,7 +186,6 @@ const products = [
     price: 299900,
     img: 'images/architech/NotreDame.png'
   },
-
 
 // ----------------------------------art
   {
@@ -239,9 +250,106 @@ const products = [
     block: 1892,
     price: 169900,
     img: 'images/art/blossoms.png'
-  }
+  },
+// -------------------------컬렉션
+  
+  {
+    name: "월-E와 이브",
+    category: ['collection', 'animation'],
+    block: 811,
+    price: 99900,
+    img: 'images/collection/animation_WALL_E.png'
+  },
 
+  {
+    name: "반지의 제왕:<br>미나스 티리스™",
+    category: ['collection', 'movie'],
+    block: 8278,
+    price: 989900,
+    img: 'images/collection/movie_TheLordoftheRings.png'
+  },
 
+  {
+    name: "해리포터 호그와트™ 성",
+    category: ['collection', 'movie'],
+    block: 6020,
+    price: 640000,
+    img: 'images/collection/movie_HarryPotter.png'
+  },
+
+  {
+    name: "에메랄드 시티 월아트",
+    category: ['collection', 'movie'],
+    block: 1518,
+    price: 209900,
+    img: 'images/collection/movie_Emerald.png'
+  },
+
+  {
+    name: "콩돌이&밤돌이의<br>유유자적 산책",
+    category: ['collection', 'animation'],
+    block: 513,
+    price: 93900,
+    img: 'images/collection/animation_Kongdori&Bamdori.png'
+  },
+
+  {
+    name: "고잉 메리호 해적선",
+    category: ['collection', 'animation'],
+    block: 1376,
+    price: 189900,
+    img: 'images/collection/animation_PirateShipGoingMerry.png'
+  },
+
+  {
+    name: "기쁨, 슬픔, 불안",
+    category: ['collection', 'animation'],
+    block: 300,
+    price: 36900,
+    img: 'images/collection/animation_Joy_sadness_anxiety.png'
+  },
+
+  {
+    name: "요다™ 흉상",
+    category: ['collection', 'movie'],
+    block: 1518,
+    price: 62900,
+    img: 'images/collection/movie_Yoda.png'
+  },
+
+  {
+    name: "네모바지 스폰지밥:<br>비키니시티",
+    category: ['collection', 'animation'],
+    block: 513,
+    price: 319900,
+    img: 'images/collection/animation_SpongeBob.png'
+  },
+
+  {
+    name: "프로젝트 헤일메리",
+    category: ['collection', 'movie'],
+    block: 830,
+    price: 159900,
+    img: 'images/collection/movie_ProjectHailMary.png'
+  },
+
+  {
+    name: "드래곤볼: 신룡<br>& 손오공",
+    category: ['collection', 'animation'],
+    block: 1764,
+    price: 199900,
+    img: 'images/collection/animation_DragonBall.png'
+  },
+
+  {
+    name: "반지의 제왕: 발록™<br>북누크",
+    category: ['collection', , 'movie'],
+    block: 1201,
+    price: 135920,
+    img: 'images/collection/movie_Booknook.png'
+  },
+
+  
 ];
 
 function displayProducts(productArray) {
@@ -258,22 +366,36 @@ function displayProducts(productArray) {
     return;
   };
 
+
   productArray.forEach(function(product){
     productList.innerHTML += `
       <div class="productCard">
+        <ul>
+          <li class="product-age">18+</li>
+          <li><img class="block-count" src="images/icon-block.png" alt="블럭개수">${product.block.toLocaleString()}</li>
+        </ul>
+
+
         <img class="productImg" src=${product.img} alt="product">
 
         <h2 class="productName">
           ${product.name}
+
+
         </h2>
 
         <p class="productPrice">
           ₩${product.price.toLocaleString()}
+
+
         </p>
       </div>
     `;
   });
+
+
 }
+
 
 displayProducts(products);
 
@@ -290,7 +412,8 @@ categoryBtns.forEach(function(btn){
     categoryBtns.forEach(function(btn){
       btn.classList.remove('active');
     });
-    
+
+
     this.classList.add('active');
     
     
@@ -300,13 +423,15 @@ categoryBtns.forEach(function(btn){
       const filteredproducts = products.filter(function(product){
         return product.category.includes(selectedCategory);
       });
-      
-      
+
+
       displayProducts(filteredproducts);
     };
 
+
   });
-    
+
+
 });
 
 
@@ -319,7 +444,8 @@ mobileCategoryBtns.forEach(function(btn){
     mobileCategoryBtns.forEach(function(btn){
       btn.classList.remove('active');
     });
-    
+
+
     this.classList.add('active');
     
     
@@ -329,11 +455,13 @@ mobileCategoryBtns.forEach(function(btn){
       const filteredproducts = products.filter(function(product){
         return product.category.includes(selectedCategory); 
       });
-      
-      
+
+
       displayProducts(filteredproducts);
     };
 
+
   });
-    
+
+
 });

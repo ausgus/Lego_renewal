@@ -1,48 +1,98 @@
-
-
-// ----------------JQuery----------------
-
+// --------------------JQuery--------------------
 $(document).ready(function(){
 
+  // --------------------Best Carousel--------------------
+  $('.best-main > .best-img').last().prependTo('.best-main');
 
-  // --------------------best carousel-----------------
-  
-    $('.prev-btn')
+  let distance = 0;
 
+  // 카드 너비와 간격을 더해서, 한 번에 이동할 거리를 정해요.
+  function setBestPosition(){
+    let cardWidth = $('.best-img').outerWidth();
+    let cardGap = parseFloat($('.best-main').css('gap'));
+    distance = cardWidth + cardGap;
 
-  
-  // --------------------best carousel End-----------------
-
-
-
-
-
-
-
-
-  // -------------------myself block scale UP--------------------
+    $('.best-main').stop(true, true).css({
+      'transform': 'translateX(-' + (distance + cardWidth / 2) + 'px)',
+      'margin-left': -distance
+    });
 
 
+  }
+
+
+  setBestPosition();
+
+  // 화면 크기가 바뀌면 카드의 이동 거리도 다시 계산
+  $(window).resize(function(){
+    setBestPosition();
+  });
+
+
+  $('.next-btn').click(function(){
+    $('.best-main').stop(true, true).animate({marginLeft: -distance * 2}, 300, function(){
+      $('.best-main > .best-img').first().appendTo('.best-main');
+      $('.best-main').css('margin-left', -distance);
+    });
+
+
+  });
+
+
+  $('.prev-btn').click(function(){
+    $('.best-main').stop(true, true).animate({marginLeft: 0}, 300, function(){
+      $('.best-main > .best-img').last().prependTo('.best-main');
+      $('.best-main').css('margin-left', -distance);
+    });
+
+
+  });
+
+
+  // --------------------Myself 번호 확대--------------------
   $('.myself-left > li').mouseenter(function(){
     let i = $(this).index();
-    $('.block-num > li').eq(i - 1).toggleClass('big');
+    if (i > 0){
+      $('.block-num > li').eq(i - 1).addClass('big');
+    }
+
+
   });
+
+
   $('.myself-left > li').mouseleave(function(){
     let i = $(this).index();
-    $('.block-num > li').eq(i - 1).toggleClass('big');
+    if (i > 0){
+      $('.block-num > li').eq(i - 1).removeClass('big');
+    }
+
+
   });
 
-
-  // -------------------myself block scale UP END--------------------
-
-
-
-  
 
 });
 
-// ----------------JQuery End----------------
+
+// --------------------찜하기 버튼--------------------
+const heartBtns = document.querySelectorAll('.heart-button');
+
+heartBtns.forEach(function(btn){
+  const heart = btn.querySelector('.heart');
+  let isLiked = false;
+
+  btn.addEventListener('click', function(){
+    isLiked = !isLiked;
+
+    if (isLiked){
+      heart.src = 'images/icon-red-heart.png';
+      heart.alt = '찜하기 취소';
+    } else {
+      heart.src = 'images/icon-heart.png';
+      heart.alt = '찜하기';
+    }
 
 
+  });
 
 
+});
