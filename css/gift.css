@@ -237,15 +237,7 @@ section:last-child{margin-bottom: 100px;}
 .best-more-btn:hover{background-color: #647300; color: var(--titWhite);}
 
 
-
-
-
-
 /* --------------------Whose Gift-------------------- */
-
-
-
-
 .whose-gift-tit{text-align: center;}
 
 
@@ -265,6 +257,11 @@ section:last-child{margin-bottom: 100px;}
 
 .whose-gift-category li{min-width: 0;}
 
+
+.whose-gift-category img{
+  display: block; width: 100%;
+  aspect-ratio: 336 / 480;
+}
 
 
 
