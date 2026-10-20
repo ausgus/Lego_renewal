@@ -188,7 +188,7 @@ header{
   border-right: 3px solid #1a1a1a;
   
   position: absolute;
-  top: 50%; right: -20px;
+  top: 50%; right: -5%;
 
   transform: translateY(-50%) rotate(-45deg);
 }
@@ -218,7 +218,8 @@ header{
 
 
 .search-wrap{
-  width: 220px;
+  width: clamp(120px, 20vw, 220px);
+  min-width: 120px;
   height: 34px;
   background-color: #fff;
   position: relative;
@@ -545,7 +546,6 @@ footer a{color: #1a1a1a;}
 
 
   .search-wrap{
-    width: 80px;
     margin-top: 0;
   }
 

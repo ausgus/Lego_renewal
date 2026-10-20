@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 
   $('header').mouseleave(function () { 
-    $('.sub-menu').stop().slideUp(300);
+    $('.gnb .sub-menu').stop().slideUp(300);
     $('.header-bg').stop().slideUp(300);
   });
 
@@ -18,9 +18,9 @@ $(document).ready(function(){
   });
 
 
-  $('.pc-hamburger-inner').mouseleave(function() {
-    $(this).removeClass('open');
-  })
+  // $('.pc-hamburger-inner').mouseleave(function() {
+  //   $(this).removeClass('open');
+  // })
 
 
   //------------------Mobile Header-------------
