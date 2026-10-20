@@ -386,13 +386,10 @@ function displayProducts(productArray) {
 
         <p class="productPrice">
           ₩${product.price.toLocaleString()}
-
-
         </p>
       </div>
     `;
   });
-
 
 }
 

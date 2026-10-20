@@ -4,7 +4,7 @@
 :root {
   --title1: clamp(16px, 4.2vw, 48px);
   --title2: clamp(16px, 2.2vw, 24px);
-  --regular: clamp(12px, 1.2vw, 18px);
+  --regular: clamp(14px, 1.2vw, 18px);
   --btn: clamp(16px, 1.6vw, 24px);
   --sectionTitle: clamp(16px, 4.2vw, 32px);
   --footerTitle: clamp(16px, 7.7vw, 30px);
@@ -398,7 +398,6 @@ footer a{color: #1a1a1a;}
   .footer-inner,
   .copyright-inner{
     width: 85%;
-    overflow-wrap: anywhere;
   }
 
 
@@ -492,6 +491,8 @@ footer a{color: #1a1a1a;}
 
 
   .mobile-gnb .mobile-main-menu .sub-menu >li:hover{color: var(--pointRed);}
+
+  .mobile-main-menu .sub-menu{font-size: var(--regular);}
 
 
   .member-reward {

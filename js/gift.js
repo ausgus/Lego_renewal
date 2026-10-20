@@ -6,17 +6,19 @@ $(document).ready(function(){
 
   let distance = 0;
 
-  // 카드 너비와 간격을 더해서, 한 번에 이동할 거리를 정해요.
+  // 카드 너비와 간격을 더해서, 한 번에 이동할 거리
   function setBestPosition(){
     let cardWidth = $('.best-img').outerWidth();
     let cardGap = parseFloat($('.best-main').css('gap'));
     distance = cardWidth + cardGap;
+//parseFloat()는 숫자와 문자가 합쳐진 문자열에서 숫자를 가져옴
+//ex) parseFloat(12.5px ) => 12.5
+
 
     $('.best-main').stop(true, true).css({
-      'transform': 'translateX(-' + (distance + cardWidth / 2) + 'px)',
+      'transform': `translateX(-${distance + cardWidth / 2}px)` ,
       'margin-left': -distance
     });
-
 
   }
 

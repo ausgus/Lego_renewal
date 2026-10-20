@@ -32,6 +32,7 @@ $(document).ready(function(){
 
   $('.mobile-main-menu a').click(function(e){
     e.preventDefault();
+    $('.mobile-main-menu .sub-menu').stop().slideUp();
     $(this).parent().next().stop().slideToggle();
   });
 
