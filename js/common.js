@@ -30,9 +30,9 @@ $(document).ready(function(){
   });
 
 
-  $('.mobile-main-menu a').click(function(e){
+  $('.mobile-main-menu h2 a').click(function(e){
     e.preventDefault();
-    $('.mobile-main-menu .sub-menu').stop().slideUp();
+    $('.mobile-main-menu h2 a').parent().next().stop().slideUp();
     $(this).parent().next().stop().slideToggle();
   });
 
