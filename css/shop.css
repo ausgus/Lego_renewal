@@ -35,8 +35,10 @@ h1{color: #eaeaea;}
 .mobile-category-list button.active{color: #D7FA24;}
 
 
-.category-list button:hover,
-.mobile-category-list button:hover{color: #D7FA24;}
+@media (hover: hover) and (pointer: fine) {
+  .category-list button:hover,
+  .mobile-category-list button:hover{color: #D7FA24;}
+}
 
 
 #productList{
@@ -110,7 +112,9 @@ h1{color: #eaeaea;}
 }
 
 
-.productCard:hover >img{transform: scale(1.1);}
+@media (hover: hover) and (pointer: fine) {
+  .productCard:hover >img{transform: scale(1.1);}
+}
 
 
 .productName {margin-bottom: 8px;}

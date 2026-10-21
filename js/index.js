@@ -22,6 +22,10 @@ $('.series-tab_btn').on('click', function(e) {
 
 // 홈 스타일링 하단 썸네일 호버 인터랙션
 $('.quick-thumb-btn').on('mouseenter', function() {
+  if ($(window).width() <= 600) {
+    return;
+  }
+
   var targetTooltip = $(this).data('tooltip');
   
   // 1. 썸네일 버튼 붉은 테두리 활성화
@@ -34,10 +38,28 @@ $('.quick-thumb-btn').on('mouseenter', function() {
 });
 
 $('.quick-thumb-btn').on('mouseleave', function() {
+  if ($(window).width() <= 600) {
+    return;
+  }
+
   // 마우스가 벗어나면 테두리와 툴팁 숨김
   $(this).removeClass('is-active');
   var targetTooltip = $(this).data('tooltip');
   $(targetTooltip).removeClass('is-active');
+});
+
+// 모바일에서는 클릭한 상품의 설명 표시
+$('.quick-thumb-btn').click(function(){
+  if ($(window).width() <= 600) {
+    let i = $(this).parent().index();
+
+    $('.quick-thumb-btn').removeClass('is-active');
+    $(this).addClass('is-active');
+
+    $('.styling-tooltip').removeClass('is-active');
+    $('.styling-card.is-active .styling-tooltip')
+      .eq(i).addClass('is-active');
+  }
 });
 
 // 홈 스타일링 공간 필터 탭 전환 (거실, 침실, 주방, 아이방)

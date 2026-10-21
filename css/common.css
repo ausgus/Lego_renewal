@@ -273,7 +273,9 @@ nav h2{font-size: 18px; font-weight: 500;}
 }
 
 
-.gnb .sub-menu > li:hover{color: var(--pointRed); font-weight: 500;}
+@media (hover: hover) and (pointer: fine) {
+  .gnb .sub-menu > li:hover{color: var(--pointRed); font-weight: 500;}
+}
 
 
 .mobile-hamburger{display: none;}
@@ -491,7 +493,9 @@ footer a{color: #1a1a1a;}
   .mobile-gnb .mobile-main-menu .sub-menu{display: none;}
 
 
-  .mobile-gnb .mobile-main-menu .sub-menu >li:hover{color: var(--pointRed);}
+  @media (hover: hover) and (pointer: fine) {
+    .mobile-gnb .mobile-main-menu .sub-menu >li:hover{color: var(--pointRed);}
+  }
 
   .mobile-main-menu .sub-menu{font-size: var(--regular); line-height: 2;}
 
