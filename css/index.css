@@ -1,0 +1,1057 @@
+@charset "utf-8";
+
+main {
+  margin-top: 80px;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 767px;
+  background-color: #2b2e38;
+  background-image: url('../images/heroBackground.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 1920px 767px;
+
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.hero_container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* 좌측 텍스트 콘텐츠 */
+.hero_content {
+  width: 100%;
+  max-width: 580px;
+}
+
+/* 제목 */
+.hero_title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  word-break: keep-all;
+}
+
+/* 본문 설명글 */
+.hero_desc {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 70px;
+  word-break: keep-all;
+}
+
+/* CTA 버튼 그룹 */
+.hero_actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero_actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hero_actions .btn-primary:hover {
+  background-color: #647300;
+  color: #fff;
+}
+.hero_actions .btn-secondary:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.hero_actions .btn-primary {
+  width: 149px;
+  height: 59px;
+  padding: 15px 30px;
+  background-color: #d4e838;
+  color: #111111;
+}
+
+.hero_actions .btn-secondary {
+  height: 59px;
+  padding: 15px 30px;
+  background-color: #d1d5db;
+  color: #111111;
+}
+
+/* ==========================================================================
+   New Products Section
+   ========================================================================== */
+.new-products {
+  width: 100%;
+  margin-top: 150px;
+  background-color: var(--background);
+  color: #ffffff;
+}
+
+.new-products_container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* 섹션 타이틀 */
+.new-products_header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.new-products_title {
+  font-size: var(--title1);
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.new-products_title .highlight {
+  color: var(--pointRed);
+}
+
+.new-products_desc {
+  font-size: var(--title2);
+  font-weight: 400;
+  color: var(--regularWhite);
+}
+
+/* 3열 카드 리스트 */
+.new-products_list {
+  display: flex;
+  justify-content: center;
+  gap: 121px;
+  width: 100%;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 썸네일 박스 */
+.product-card_thumb-box {
+  position: relative;
+  width: 399px;
+  height: 529px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.product-card_thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card_thumb {
+  transform: scale(1.03);
+}
+
+/* 좌측 상단 뱃지 묶음 */
+.product-card_badges {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 29px;
+  border-radius: 9999px;
+  font-size: 16px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.badge-new {
+  background-color: var(--pointRed);
+  color: #ffffff;
+  padding: 0 14px;
+}
+
+.badge-age {
+  background-color: #ffd600;
+  color: #1a1a1a;
+  padding: 0 14px;
+}
+
+.badge-pieces {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  padding: 0 14px;
+  gap: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.badge-pieces .badge_icon {
+  width: 17px;
+  height: 17px;
+}
+
+/* 우측 하단 동그란 버튼 그룹 */
+.product-card_actions {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  z-index: 2;
+}
+
+.product-card_actions button {
+  width: 52px;
+  height: 52px;
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.product-card_actions button:hover {
+  transform: translateY(-2px);
+}
+
+.Btn-Cart-img,
+.Btn-Heart img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+  display: block;
+}
+
+/* 하트 클릭 시 이미지 교체 */
+.Btn-Heart .icon-heart-active {
+  display: none;
+}
+
+.Btn-Heart.is-active .icon-heart-default {
+  display: none;
+}
+
+.Btn-Heart.is-active .icon-heart-active {
+  display: block;
+}
+
+/* 하단 상품 텍스트 정보 */
+.product-card_info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.product-card_name {
+  font-size: var(--title2);
+  font-weight: normal;
+  color: var(--titWhite);
+  margin-bottom: 8px;
+  word-break: keep-all;
+}
+
+.product-card_price {
+  font-size: 18px;
+  font-weight: normal;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+Series Showcase Section (인기 시리즈 쇼케이스 탭)
+========================================================================== */
+.series-showcase {
+  width: 100%;
+  margin-top: 100px;
+  padding: 120px 100px;
+  background-color: #373737;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.series-showcase_container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* 상단 디스플레이 영역 */
+.series-display {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  margin-bottom: 70px;
+}
+
+.series-panel {
+  display: none;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  animation: fadeIn 0.4s ease-in-out forwards;
+}
+
+.series-panel.is-active {
+  display: flex;
+}
+
+.series-panel_content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.series-panel_title {
+  font-size: var(--title1);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.series-panel_title .highlight {
+  color: var(--pointRed);
+}
+
+.series-panel_subtitle {
+  font-size: 32px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.series-panel_desc {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--regularWhite);
+  margin-bottom: 40px;
+  word-break: keep-all;
+}
+
+.series-panel_actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.series-panel_actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 149px;
+  height: 59px;
+  padding: 15px 30px;
+  border-radius: var(--btnRadius);
+  font-size: 24px;
+  font-weight: 500;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.series-panel_actions .btn-primary:hover {
+  background-color: #647300;
+  color: #fff;
+}
+.series-panel_actions .btn-secondary:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.series-panel_actions .btn-primary {
+  background-color: var(--pointLime);
+  color: #1a1a1a;
+}
+
+.series-panel_actions .btn-secondary {
+  background-color: #8c8f96;
+  color: #ffffff;
+}
+
+.series-panel_visual {
+  flex: 1.3;
+  max-width: 820px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.series-panel_visual img {
+  width: 100%;
+  height: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+/* 하단 5열 썸네일 탭 */
+.series-tabs {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+.series-tab_item {
+  width: 100%;
+}
+
+.series-tab_btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  outline: none;
+}
+
+.series-tab_thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.series-tab_thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.series-tab_btn.is-active .series-tab_thumb {
+  border-color: var(--pointRed);
+  box-shadow: 0 0 15px rgba(248, 32, 32, 0.4);
+}
+
+.series-tab_name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--regularWhite);
+  transition: color 0.25s ease;
+}
+
+.series-tab_btn:hover .series-tab_name,
+.series-tab_btn.is-active .series-tab_name {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Special Gift Section (레고로 전하는 특별한 선물)
+   ========================================================================== */
+.special-gift {
+  position: relative;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 160px;
+  background-image: url('../images/giftBackground.png');
+  background-size: contain;
+
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.special-gift_container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  box-sizing: border-box;
+  z-index: 1;
+} /* 닫는 괄호 복구 완료 */
+
+/* 좌측 2x2 이미지 갤러리 그리드 */
+.special-gift_gallery {
+  flex: 1.2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 695px;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.special-gift_img-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 0.85;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  text-decoration: none;
+}
+
+.special-gift_img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.special-gift_img-box:hover img {
+  transform: scale(1.05);
+}
+
+/* 호버 시 나타날 어두운 반투명 오버레이 박스 */
+.special-gift_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.special-gift_img-box:hover .special-gift_overlay {
+  opacity: 1;
+}
+
+.special-gift_theme {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+}
+
+.special-gift_img-box:hover .special-gift_theme {
+  transform: translateY(0);
+}
+
+/* 우측 텍스트 콘텐츠 & 버튼 */
+.special-gift_content {
+  flex: 1;
+  max-width: 540px;
+}
+
+.special-gift_title {
+  font-size: var(--title1);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+}
+
+.special-gift_title .highlight {
+  color: var(--pointRed);
+}
+
+.special-gift_desc {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--regularWhite);
+  margin-bottom: 48px;
+  word-break: keep-all;
+}
+
+.special-gift_actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 59px;
+  padding: 15px 36px;
+  border-radius: var(--btnRadius);
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: var(--pointLime);
+  color: #111111;
+  transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.special-gift_actions .btn:hover {
+  background-color: #647300;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Home Styling Section (홈 스타일링 쇼룸)
+   ========================================================================== */
+.home-styling {
+  width: 100%;
+  padding: 120px 40px;
+  background-color: #373737;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.home-styling_container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* --- 헤더 --- */
+.home-styling_header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.home-styling_title {
+  font-size: var(--title1); /* 48px */
+  font-weight: 700;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.home-styling_title .highlight {
+  color: var(--pointRed); /* '홈' 레드 포인트 */
+}
+
+.home-styling_desc {
+  font-size: var(--title2); /* 24px */
+  font-weight: 400;
+  color: var(--regularWhite);
+}
+
+/* --- 공간 필터 탭 (거실/침실/주방/아이방) --- */
+.styling-filters {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 50px;
+  list-style: none;
+  padding: 0;
+}
+
+.filter-btn {
+  height: 48px;
+  padding: 0 32px;
+  border-radius: 9999px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+  border-color: var(--pointLime);
+  color: var(--pointLime);
+}
+
+.filter-btn.is-active {
+  background-color: var(--pointLime);
+  color: #111111;
+  border-color: var(--pointLime);
+  font-weight: 700;
+}
+
+/* --- 쇼룸 메인 컨테이너 --- */
+/* 기존 .styling-showroom 대신 아래 스타일로 적용 */
+.styling-group {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* 개별 공간 카드: 평소에는 숨김 */
+.styling-card {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 활성화된 탭의 공간만 표시 */
+.styling-card.is-active {
+  display: flex;
+}
+
+/* 메인 대형 이미지 박스 */
+.styling-card_img-box {
+  position: relative;
+  width: 100%;
+  max-height: 680px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+}
+
+.styling-card_main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- [핵심] 연출 컷 내부 툴팁 카드 --- */
+.styling-tooltip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 18px 12px 12px;
+  background-color: rgba(30, 30, 30, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+  z-index: 10;
+  
+  /* 기본 숨김 & 페이드 트랜지션 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  pointer-events: none;
+}
+
+/* 활성화 시 표시 */
+.styling-tooltip.is-active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* 툴팁 내부 상품 썸네일 (흰 배경 박스) */
+.styling-tooltip_thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.styling-tooltip_thumb img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+}
+
+/* 툴팁 텍스트 정보 */
+.styling-tooltip_info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+.styling-tooltip_category {
+  font-size: 13px;
+  color: var(--regularWhite);
+}
+
+.styling-tooltip_name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.styling-tooltip_price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* --- 하단 플로팅 미니 썸네일 바 --- */
+.styling-quickbar {
+  margin-top: 24px;
+  padding: 10px 16px;
+  background-color: rgba(26, 26, 26, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.styling-quickbar_list {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-thumb-btn {
+  width: 54px;
+  height: 54px;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0;
+  border: 2px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+  display: block;
+}
+
+.quick-thumb-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* [핵심] 호버 / 활성화 테두리 강조 */
+.quick-thumb-btn:hover,
+.quick-thumb-btn.is-active {
+  border-color: var(--pointRed); /* #f82020 붉은 테두리 */
+  transform: translateY(-2px);
+}
+
+/* 더보기 (+5) 버튼 */
+.quick-more-btn {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.quick-more-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+}
+
+.quick-more-text {
+  position: absolute;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ==========================================================================
+NEW News Section (NEW 소식 슬라이더)
+========================================================================== */
+.news-section {
+  width: 100%;
+  padding: 120px 0 120px 40px; /* 우측으로 자연스럽게 이어지도록 우측 여백은 0 처리 */
+  background-color: var(--background);
+  color: #ffffff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.news-section_container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* --- 상단 헤더 --- */
+.news-section_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 40px;
+  margin-bottom: 40px;
+}
+
+.news-section_title {
+  font-size: var(--title1); /* 48px */
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.news-section_title .highlight {
+  color: var(--pointRed); /* 'NEW' 포인트 컬러 */
+}
+
+.news-section_desc {
+  font-size: var(--title2); /* 24px */
+  font-weight: 400;
+  color: var(--regularWhite);
+}
+
+/* --- 우측 원형 좌우 화살표 버튼 --- */
+.news-section_controls {
+  display: flex;
+  gap: 12px;
+}
+
+.news-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+.news-btn:hover {
+  background-color: #ffffff;
+  color: #111111;
+  border-color: #ffffff;
+}
+
+/* --- 가로 슬라이더 영역 --- */
+.news-slider_wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.news-slider_wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.news-slider_list {
+  display: flex;
+  gap: 90px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: max-content; /* 내부 카드가 줄바꿈 없이 가로로 나열 */
+}
+
+/* --- 개별 뉴스 카드 --- */
+.news-card {
+  width: 290px; /* 피그마 포스터 카드 가로폭 */
+  flex-shrink: 0;
+}
+
+.news-card_link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 상단 텍스트 정보 */
+.news-card_info {
+  margin-bottom: 20px;
+  height: 80px; /* 타이틀 줄바꿈에도 높이가 균일하게 유지되도록 고정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-card_title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #ffffff;
+  padding-left: 10px;
+  border-left: 2px solid #ffffff; /* 좌측 흰색 세로 바 */
+  word-break: keep-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 2줄 초과 시 말줄임 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-card_date {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+  padding-left: 10px;
+}
+
+/* 하단 포스터 썸네일 */
+.news-card_thumb {
+  width: 100%;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.news-card_thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+/* 호버 효과 */
+.news-card_link:hover .news-card_thumb img {
+  transform: scale(1.04);
+}
+
+.news-card_link:hover .news-card_title {
+  color: var(--pointLime);
+  border-left-color: var(--pointLime);
+}
+
+footer{
+  margin-top: 0;
+}

@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lego Main</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- ---------webFont--------- -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<!-- ------------------------------------- -->
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+<script src="js/common.js" defer></script>
+<script src="js/index.js" defer></script>
 
-  <!-- ---------webFont--------- -->
-  <link rel="precon nect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-  <!-- ------------------------------------- -->
-  <link rel="stylesheet" href="css/common.css">
-  
 
-  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-  <script src="js/common.js" defer></script>
 
 </head>
 <body>
+
   <header>
     <div class="header-bg"></div>
 
@@ -80,7 +82,6 @@
     <div class="header-wrap">
       <div class="mobile-hamburger">
         <div class="mobile-hamburger-top">
-          <!-- <div class="mobile-hamburger-top-bg"></div> -->
           <img src="images/Icon-hamburger.png" alt="햄버거 메뉴">
           <h2>LEGO® <em>Insiders</em></h2>
         </div>
@@ -216,142 +217,865 @@
     </div>
   </header>
 
-  <main style="height: 500px;"></main>
+    <main>
+        <section class="hero">
+            <div class="hero_container">
+                <div class="hero_content">
+                    <div class="hero_header">
+                        <h1 class="hero_title">
+                            우리들의 추억 속 게임기<br>
+                            플레이스테이션
+                        </h1>
+                        <p class="hero_desc">
+                            정교한 플레이스테이션 복제 모델과<br>
+                            컨트롤러를 조립하며 추억 여행을 떠나볼까요?<br>
+                            내부를 들여다보면 아마 깜짝 놀랄 거예요.
+                        </p>
+                    </div>
+                    <div class="hero_actions">
+                        <a href="#buy" class="btn btn-primary">구매하기</a>
+                        <a href="#membership" class="btn btn-secondary">멤버십 가입</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="new-products">
+            <div class="new-products_container">
+                <div class="new-products_header">
+                    <h2 class="new-products_title">이달의 <span class="highlight">신작</span> 레고</h2>
+                    <p class="new-products_desc">이달에 출시한 레고 제품을 확인해 보세요!</p>
+                </div>
+                <ul class="new-products_list">
+                    <!-- 1. 캡틴 잭 스패로우의 해적선 -->
+                    <li class="product-card">
+                        <div class="product-card_thumb-box">
+                            <img src="images/Product1.png" alt="캡틴 잭 스패로우의 해적선" class="product-card_thumb">
+                            <div class="product-card_badges">
+                                <span class="badge badge-new">NEW</span>
+                                <span class="badge badge-age">18+</span>
+                                <span class="badge badge-pieces">
+                                    <img src="images/Puzzle.png" alt="퍼즐" class="badge_icon">
+                                    2582
+                                </span>
+                            </div>
+                            <div class="product-card_actions">
+                                <button type="button" class="Btn-Cart" aria-label="장바구니 담기">
+                                    <img src="images/Btn-Cart.png" alt="" class="Btn-Cart-img">
+                                </button>
+                                <button type="button" class="Btn-Heart" aria-label="관심 상품 추가">
+                                    <img src="images/Btn-Heart.png" alt="좋아요" class="icon-heart-default">
+                                    <img src="images/Btn-Heart-red.png" alt="좋아요 취소" class="icon-heart-active">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card_info">
+                            <p class="product-card_name">캡틴 잭 스패로우의 해적선</p>
+                            <p class="product-card_price">499,900 원</p>
+                        </div>
+                    </li>
 
+                    <!-- 2. 마리오 & 스턴트 카트 -->
+                    <li class="product-card">
+                        <div class="product-card_thumb-box">
+                            <img src="images/Product2.png" alt="마리오 & 스턴트 카트" class="product-card_thumb">
+                            <div class="product-card_badges">
+                                <span class="badge badge-new">NEW</span>
+                                <span class="badge badge-age">8+</span>
+                                <span class="badge badge-pieces">
+                                    <img src="images/Puzzle.png" alt="퍼즐" class="badge_icon">
+                                    850
+                                </span>
+                            </div>
+                            <div class="product-card_actions">
+                                <button type="button" class="Btn-Cart" aria-label="장바구니 담기">
+                                    <img src="images/Btn-Cart.png" alt="" class="Btn-Cart-img">
+                                </button>
+                                <button type="button" class="Btn-Heart" aria-label="관심 상품 추가">
+                                    <img src="images/Btn-Heart.png" alt="좋아요" class="icon-heart-default">
+                                    <img src="images/Btn-Heart-red.png" alt="좋아요 취소" class="icon-heart-active">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card_info">
+                            <p class="product-card_name">마리오 & 스턴트 카트</p>
+                            <p class="product-card_price">239,900 원</p>
+                        </div>
+                    </li>
 
+                    <!-- 3. 호랑이 더피와 까치 서씨 -->
+                    <li class="product-card">
+                        <div class="product-card_thumb-box">
+                            <img src="images/Product3.png" alt="호랑이 더피와 까치 서씨" class="product-card_thumb">
+                            <div class="product-card_badges">
+                                <span class="badge badge-new">NEW</span>
+                                <span class="badge badge-age">9+</span>
+                                <span class="badge badge-pieces">
+                                    <img src="images/Puzzle.png" alt="퍼즐" class="badge_icon">
+                                    852
+                                </span>
+                            </div>
+                            <div class="product-card_actions">
+                                <button type="button" class="Btn-Cart" aria-label="장바구니 담기">
+                                    <img src="images/Btn-Cart.png" alt="" class="Btn-Cart-img">
+                                </button>
+                                <button type="button" class="Btn-Heart" aria-label="관심 상품 추가">
+                                    <img src="images/Btn-Heart.png" alt="좋아요" class="icon-heart-default">
+                                    <img src="images/Btn-Heart-red.png" alt="좋아요 취소" class="icon-heart-active">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card_info">
+                            <p class="product-card_name">호랑이 더피와 까치 서씨</p>
+                            <p class="product-card_price">109,900 원</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="series-showcase">
+            <div class="series-showcase_container">
+                
+                <!-- 상단 디스플레이 영역 (탭 콘텐츠 묶음) -->
+                <div class="series-display">
+                    
+                    <!-- 1. 포켓몬스터 패널 -->
+                    <div class="series-panel" id="series-pokemon">
+                        <div class="series-panel_content">
+                            <h2 class="series-panel_title">
+                                포켓몬스터 <span class="highlight">시리즈</span>
+                            </h2>
+                            <p class="series-panel_subtitle">
+                                모험을 떠나는 트레이너들의 이야기
+                            </p>
+                            <p class="series-panel_desc">
+                                포켓몬 세계의 다양한 캐릭터들을 직접 조립하고<br>
+                                나만의 배틀 필드를 완성해 보세요.
+                            </p>
+                            <div class="series-panel_actions">
+                                <a href="#" class="btn btn-primary">보러가기</a>
+                                <a href="#" class="btn btn-secondary">카테고리</a>
+                            </div>
+                        </div>
+                        <div class="series-panel_visual">
+                            <img src="images/SeriesIMG-Pokemon1.png" alt="포켓몬스터 시리즈 연출컷">
+                        </div>
+                    </div>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-head">
-        <h1 class="footerlego"><img src="images/legoHead.png" alt="logo"></h1>
-        <h1 class="footer-slogan">Only The Best Is Good Enough</h1>
-      </div>
-      
-      <div class="footer-main">
-        <ul class="footer-menu">
-          <li>
-            <h2><a href="#">회사소개</a></h2>
-            <ul class="footer-sub-menu">
-              <li><a href="#">레고 그룹 소개</a></li>
-              <li><a href="#">레고® 뉴스</a></li>
-              <li><a href="#">레고 소식</a></li>
-              <li><a href="#">지속가능한 사업</a></li>
-              <li><a href="#">공급망 투명성 선언</a></li>
-              <li><a href="#">레고 제품 인증</a></li>
-              <li><a href="#">LEGO Compliance Line</a></li>
+                    <!-- 2. 테크닉 패널 -->
+                    <div class="series-panel" id="series-technic">
+                        <div class="series-panel_content">
+                            <h2 class="series-panel_title">
+                                테크닉 <span class="highlight">시리즈</span>
+                            </h2>
+                            <p class="series-panel_subtitle">
+                                진짜 엔지니어링의 세계를 경험하세요
+                            </p>
+                            <p class="series-panel_desc">
+                                정교한 기어 박스와 강력한 서스펜션을 직접 맞추며<br>
+                                궁극의 레이싱 카를 완성해 보세요.
+                            </p>
+                            <div class="series-panel_actions">
+                                <a href="#" class="btn btn-primary">보러가기</a>
+                                <a href="#" class="btn btn-secondary">카테고리</a>
+                            </div>
+                        </div>
+                        <div class="series-panel_visual">
+                            <img src="images/SeriesIMG-technique1.png" alt="테크닉 시리즈 연출컷">
+                        </div>
+                    </div>
+
+                    <!-- 3. 마블 패널 (기본 활성화: is-active) -->
+                    <div class="series-panel is-active" id="series-marvel">
+                        <div class="series-panel_content">
+                            <h2 class="series-panel_title">
+                                마블 <span class="highlight">시리즈</span>
+                            </h2>
+                            <p class="series-panel_subtitle">
+                                지구를 지키는 히어로들의 격전
+                            </p>
+                            <p class="series-panel_desc">
+                                마블 시네마틱 유니버스의 압도적인<br>
+                                명장면을 직접 조립해보세요.
+                            </p>
+                            <div class="series-panel_actions">
+                                <a href="#" class="btn btn-primary">보러가기</a>
+                                <a href="#" class="btn btn-secondary">카테고리</a>
+                            </div>
+                        </div>
+                        <div class="series-panel_visual">
+                            <img src="images/SeriesIMG-Marvel1.png" alt="마블 시리즈 연출컷">
+                        </div>
+                    </div>
+
+                    <!-- 4. 슈퍼 마리오 패널 -->
+                    <div class="series-panel" id="series-mario">
+                        <div class="series-panel_content">
+                            <h2 class="series-panel_title">
+                                슈퍼 마리오 <span class="highlight">시리즈</span>
+                            </h2>
+                            <p class="series-panel_subtitle">
+                                레고 브릭으로 즐기는 생생한 게임 코스
+                            </p>
+                            <p class="series-panel_desc">
+                                인터랙티브 레고 마리오 피겨와 함께 코스를 달리고<br>
+                                코인을 모으며 모험을 시작해 보세요.
+                            </p>
+                            <div class="series-panel_actions">
+                                <a href="#" class="btn btn-primary">보러가기</a>
+                                <a href="#" class="btn btn-secondary">카테고리</a>
+                            </div>
+                        </div>
+                        <div class="series-panel_visual">
+                            <img src="images/SeriesIMG-Mario1.png" alt="슈퍼 마리오 시리즈 연출컷">
+                        </div>
+                    </div>
+
+                    <!-- 5. 모여봐요 동물의 숲 패널 -->
+                    <div class="series-panel" id="series-animal">
+                        <div class="series-panel_content">
+                            <h2 class="series-panel_title">
+                                동물의 숲 <span class="highlight">시리즈</span>
+                            </h2>
+                            <p class="series-panel_subtitle">
+                                느긋하고 평화로운 나만의 섬 생활
+                            </p>
+                            <p class="series-panel_desc">
+                                귀여운 동물 친구들과 아기자기한 집을 꾸미고<br>
+                                힐링 가득한 섬 일상을 레고로 표현해 보세요.
+                            </p>
+                            <div class="series-panel_actions">
+                                <a href="#" class="btn btn-primary">보러가기</a>
+                                <a href="#" class="btn btn-secondary">카테고리</a>
+                            </div>
+                        </div>
+                        <div class="series-panel_visual">
+                            <img src="images/SeriesIMG-Animals1.png" alt="동물의 숲 시리즈 연출컷">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 하단 썸네일 탭 버튼 리스트 (5개 그리드) -->
+                <ul class="series-tabs">
+                    <li class="series-tab_item">
+                        <button type="button" class="series-tab_btn" data-target="#series-pokemon">
+                            <div class="series-tab_thumb">
+                                <img src="images/SeriesIMG-Pokemon2.png" alt="포켓몬스터">
+                            </div>
+                            <span class="series-tab_name">포켓몬스터</span>
+                        </button>
+                    </li>
+                    <li class="series-tab_item">
+                        <button type="button" class="series-tab_btn" data-target="#series-technic">
+                            <div class="series-tab_thumb">
+                                <img src="images/SeriesIMG-technique2.png" alt="테크닉">
+                            </div>
+                            <span class="series-tab_name">테크닉</span>
+                        </button>
+                    </li>
+                    <!-- 기본 활성화: is-active (붉은 테두리) -->
+                    <li class="series-tab_item">
+                        <button type="button" class="series-tab_btn is-active" data-target="#series-marvel">
+                            <div class="series-tab_thumb">
+                                <img src="images/SeriesIMG-Marvel2.png" alt="마블">
+                            </div>
+                            <span class="series-tab_name">마블</span>
+                        </button>
+                    </li>
+                    <li class="series-tab_item">
+                        <button type="button" class="series-tab_btn" data-target="#series-mario">
+                            <div class="series-tab_thumb">
+                                <img src="images/SeriesIMG-Mario2.png" alt="슈퍼 마리오">
+                            </div>
+                            <span class="series-tab_name">슈퍼 마리오</span>
+                        </button>
+                    </li>
+                    <li class="series-tab_item">
+                        <button type="button" class="series-tab_btn" data-target="#series-animal">
+                            <div class="series-tab_thumb">
+                                <img src="images/SeriesIMG-Animals2.png" alt="모여봐요 동물의 숲">
+                            </div>
+                            <span class="series-tab_name">모여라 동물의숲</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- ==========================================================================
+        Special Gift Section (레고로 전하는 특별한 선물)
+        ========================================================================== -->
+        <section class="special-gift">
+            <div class="special-gift_container">
+                <!-- 좌측 2x2 이미지 갤러리 그리드 -->
+                <div class="special-gift_gallery">
+                    <!-- 1. 일상/어린이날 -->
+                    <a href="#" class="special-gift_img-box">
+                        <img src="images/gift-img1.png" alt="아이들을 위한 레고 시티 선물">
+                        <div class="special-gift_overlay">
+                            <span class="special-gift_theme">어린이날</span>
+                        </div>
+                    </a>
+
+                    <!-- 2. 크리스마스 (호버 예시) -->
+                    <a href="#" class="special-gift_img-box">
+                        <img src="images/gift-img2.png" alt="크리스마스 트리 레고 선물">
+                        <div class="special-gift_overlay">
+                            <span class="special-gift_theme">크리스마스</span>
+                        </div>
+                    </a>
+
+                    <!-- 3. 할로윈 -->
+                    <a href="#" class="special-gift_img-box">
+                        <img src="images/gift-img3.png" alt="할로윈 파티 레고 선물">
+                        <div class="special-gift_overlay">
+                            <span class="special-gift_theme">할로윈</span>
+                        </div>
+                    </a>
+
+                    <!-- 4. 생일 / 기념일 -->
+                    <a href="#" class="special-gift_img-box">
+                        <img src="images/gift-img4.png" alt="어른들을 위한 스피드 챔피언 레고 선물">
+                        <div class="special-gift_overlay">
+                            <span class="special-gift_theme">생일</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 우측 텍스트 & CTA 버튼 -->
+                <div class="special-gift_content">
+                    <h2 class="special-gift_title">
+                        레고로 전하는 특별한 <span class="highlight">선물</span>
+                    </h2>
+                    <p class="special-gift_desc">
+                        아이들을 위한 꿈부터<br>
+                        어른들을 위한 인테리어 오브제까지<br>
+                        받는 사람의 취향에 딱 맞는 특별한 선물을<br>
+                        지금 찾아 보세요.
+                    </p>
+                    <div class="special-gift_actions">
+                        <a href="gift.html" class="btn btn-primary">선물 찾기</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+<!-- ==========================================================================
+Home Styling Section (레고로 꾸미는 홈 스타일링)
+========================================================================== -->
+        <section class="home-styling">
+            <div class="home-styling_container">
+                <div class="home-styling_header">
+                    <h2 class="home-styling_title">
+                        레고로 꾸미는 <span class="highlight">홈</span> 스타일링
+                    </h2>
+                    <p class="home-styling_desc">
+                        감각적인 레고 홈 데코 오브제를 확인해 보세요.
+                    </p>
+                </div>
+
+                <!-- 공간 카테고리 탭 (알약형 필터: data-target 연결) -->
+                <ul class="styling-filters">
+                    <li><button type="button" class="filter-btn is-active" data-target="#styling-livingroom">거실</button></li>
+                    <li><button type="button" class="filter-btn" data-target="#styling-bedroom">침실</button></li>
+                    <li><button type="button" class="filter-btn" data-target="#styling-kitchen">주방</button></li>
+                    <li><button type="button" class="filter-btn" data-target="#styling-kids">아이방</button></li>
+                </ul>
+
+                <!-- 쇼룸 메인 비주얼 & 내부 툴팁 그룹 -->
+                <ul class="styling-group">
+                    <!-- 1. 거실 (기본 활성화: is-active) -->
+                    <li class="styling-card is-active" id="styling-livingroom">
+                        <div class="styling-card_img-box">
+                            <img src="images/Home-livingroom.png" alt="거실 인테리어 레고 홈 데코 연출컷" class="styling-card_main-img">
+
+                            <!-- 1-1. 백팩 툴팁 -->
+                            <div class="styling-tooltip" id="tooltip-showroom-backpack" style="top: 58%; left: 32%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/livingroom-tag1.png" alt="Herschel Heritage 유스 백팩">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">가방</span>
+                                    <strong class="styling-tooltip_name">Herschel Heritage 유스 백팩</strong>
+                                    <span class="styling-tooltip_price">109,000원</span>
+                                </div>
+                            </div>
+
+                            <!-- 1-2. 액자 툴팁 -->
+                            <div class="styling-tooltip" id="tooltip-showroom-frame" style="top: 30%; left: 40%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/livingroom-tag2.png" alt="레고 포토 프레임">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">홈 데코</span>
+                                    <strong class="styling-tooltip_name">레고 포토 액자</strong>
+                                    <span class="styling-tooltip_price">49,900원</span>
+                                </div>
+                            </div>
+
+                            <!-- 1-3. 원목 피규어 툴팁 -->
+                            <div class="styling-tooltip" id="tooltip-showroom-figure" style="top: 33%; left: 50%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/livingroom-tag3.png" alt="레고 우든 미니피겨">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">오브제</span>
+                                    <strong class="styling-tooltip_name">꼭두각시 인형 레고</strong>
+                                    <span class="styling-tooltip_price">159,000원</span>
+                                </div>
+                            </div>
+
+                            <!-- 1-4. 서랍장 툴팁 -->
+                            <div class="styling-tooltip" id="tooltip-showroom-drawer" style="top: 70%; left: 75%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/livingroom-tag4.png" alt="우든 서랍장 랙">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">수납</span>
+                                    <strong class="styling-tooltip_name">우든 브릭 서랍장</strong>
+                                    <span class="styling-tooltip_price">189,000원</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 하단 플로팅 미니 썸네일 바 -->
+                        <div class="styling-quickbar">
+                            <ul class="styling-quickbar_list">
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-showroom-backpack">
+                                        <img src="images/HomeDecor1.png" alt="백팩">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-showroom-frame">
+                                        <img src="images/HomeDecor2.png" alt="액자">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-showroom-figure">
+                                        <img src="images/HomeDecor4.png" alt="우든 미니피겨">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-showroom-drawer">
+                                        <img src="images/HomeDecor3.png" alt="서랍장">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <a href="#" class="quick-more-btn">
+                                        <img src="images/HomeDecor5.png" alt="더보기">
+                                        <span class="quick-more-text">+7</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 2. 침실 -->
+                    <li class="styling-card" id="styling-bedroom">
+                        <div class="styling-card_img-box">
+                            <img src="images/Home-bedroom.png" alt="침실 인테리어 연출컷" class="styling-card_main-img">
+
+                            <div class="styling-tooltip" id="tooltip-bedroom-backpack" style="top: 10%; left: 53%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/bedroom-tag1.png" alt="Herschel Heritage 유스 백팩">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">가방</span>
+                                    <strong class="styling-tooltip_name">Herschel Heritage 유스 백팩</strong>
+                                    <span class="styling-tooltip_price">109,000원</span>
+                                </div>
+                            </div>
+
+                            <div class="styling-tooltip" id="tooltip-bedroom-frame" style="top: 10%; left: 72%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/bedroom-tag3.png" alt="레고 포토 프레임">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">홈 데코</span>
+                                    <strong class="styling-tooltip_name">우든 포토 프레임</strong>
+                                    <span class="styling-tooltip_price">79,900원</span>
+                                </div>
+                            </div>
+
+                            <div class="styling-tooltip" id="tooltip-bedroom-figure" style="top: 75%; left: 72%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/bedroom-tag4.png" alt="레고 우든 미니피겨">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">오브제</span>
+                                    <strong class="styling-tooltip_name">레고 오리지널 우든 미니피겨</strong>
+                                    <span class="styling-tooltip_price">159,000원</span>
+                                </div>
+                            </div>
+
+                            <div class="styling-tooltip" id="tooltip-bedroom-drawer" style="top: 30%; left: 18%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/bedroom-tag2.png" alt="우든 서랍장 랙">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">수납</span>
+                                    <strong class="styling-tooltip_name">우든 2구 브릭 서랍장</strong>
+                                    <span class="styling-tooltip_price">189,000원</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="styling-quickbar">
+                            <ul class="styling-quickbar_list">
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-bedroom-backpack">
+                                        <img src="images/HomeDecor6.png" alt="백팩">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-bedroom-frame">
+                                        <img src="images/HomeDecor7.png" alt="액자">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-bedroom-figure">
+                                        <img src="images/HomeDecor8.png" alt="우든 미니피겨">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-bedroom-drawer">
+                                        <img src="images/HomeDecor9.png" alt="서랍장">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <a href="#" class="quick-more-btn">
+                                        <img src="images/HomeDecor10.png" alt="더보기">
+                                        <span class="quick-more-text">+5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 3. 주방 -->
+                    <li class="styling-card" id="styling-kitchen">
+                        <div class="styling-card_img-box">
+                            <img src="images/Home-Kitchen.png" alt="주방 인테리어 연출컷" class="styling-card_main-img">
+
+                            <div class="styling-tooltip" id="tooltip-kitchen-backpack" style="top: 43%; left: 28%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/Kitchen-tag3.png" alt="Herschel Heritage 유스 백팩">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">가방</span>
+                                    <strong class="styling-tooltip_name">Herschel Heritage 유스 백팩</strong>
+                                    <span class="styling-tooltip_price">109,000원</span>
+                                </div>
+                            </div>
+
+                            <div class="styling-tooltip" id="tooltip-kitchen-frame" style="top: 76%; left: 45%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/Kitchen-tag4.png" alt="레고 포토 프레임">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">홈 데코</span>
+                                    <strong class="styling-tooltip_name">우든 포토 프레임</strong>
+                                    <span class="styling-tooltip_price">79,900원</span>
+                                </div>
+                            </div>
+
+                            <div class="styling-tooltip" id="tooltip-kitchen-figure" style="top: 58%; left: 76%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/Kitchen-tag1.png" alt="레고 우든 미니피겨">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">오브제</span>
+                                    <strong class="styling-tooltip_name">레고 오리지널 우든 미니피겨</strong>
+                                    <span class="styling-tooltip_price">159,000원</span>
+                                </div>
+                            </div>
+
+                            <div class="styling-tooltip" id="tooltip-kitchen-drawer" style="top: 65%; left: 64%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/Kitchen-tag2.png" alt="우든 서랍장 랙">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">수납</span>
+                                    <strong class="styling-tooltip_name">우든 2구 브릭 서랍장</strong>
+                                    <span class="styling-tooltip_price">189,000원</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="styling-quickbar">
+                            <ul class="styling-quickbar_list">
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-kitchen-backpack">
+                                        <img src="images/HomeDecor16.png" alt="백팩">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-kitchen-frame">
+                                        <img src="images/HomeDecor17.png" alt="액자">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-kitchen-figure">
+                                        <img src="images/HomeDecor18.png" alt="우든 미니피겨">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-kitchen-drawer">
+                                        <img src="images/HomeDecor19.png" alt="서랍장">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <a href="#" class="quick-more-btn">
+                                        <img src="images/HomeDecor20.png" alt="더보기">
+                                        <span class="quick-more-text">+5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 4. 키즈룸 (아이방) -->
+                    <li class="styling-card" id="styling-kids">
+                        <div class="styling-card_img-box">
+                            <img src="images/Home-KidsRoom.png" alt="키즈룸 인테리어 연출컷" class="styling-card_main-img">
+
+                            <div class="styling-tooltip" id="tooltip-kids-backpack" style="top: 65%; left: 27%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/KidsRoom-tag1.png" alt="Herschel Heritage 유스 백팩">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">가방</span>
+                                    <strong class="styling-tooltip_name">Herschel Heritage 유스 백팩</strong>
+                                    <span class="styling-tooltip_price">109,000원</span>
+                                </div>
+                            </div>
+
+                            <div class="styling-tooltip" id="tooltip-kids-frame" style="top: 8%; left: 48%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/KidsRoom-tag2.png" alt="레고 포토 프레임">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">홈 데코</span>
+                                    <strong class="styling-tooltip_name">우든 포토 프레임</strong>
+                                    <span class="styling-tooltip_price">79,900원</span>
+                                </div>
+                            </div>
+
+                            <div class="styling-tooltip" id="tooltip-kids-figure" style="top: 72%; left: 56%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/KidsRoom-tag4.png" alt="레고 우든 미니피겨">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">오브제</span>
+                                    <strong class="styling-tooltip_name">레고 오리지널 우든 미니피겨</strong>
+                                    <span class="styling-tooltip_price">159,000원</span>
+                                </div>
+                            </div>
+
+                            <div class="styling-tooltip" id="tooltip-kids-drawer" style="top: 60%; left: 60%;">
+                                <div class="styling-tooltip_thumb">
+                                    <img src="images/KidsRoom-tag3.png" alt="우든 서랍장 랙">
+                                </div>
+                                <div class="styling-tooltip_info">
+                                    <span class="styling-tooltip_category">수납</span>
+                                    <strong class="styling-tooltip_name">우든 2구 브릭 서랍장</strong>
+                                    <span class="styling-tooltip_price">189,000원</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="styling-quickbar">
+                            <ul class="styling-quickbar_list">
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-kids-backpack">
+                                        <img src="images/HomeDecor11.png" alt="백팩">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-kids-frame">
+                                        <img src="images/HomeDecor12.png" alt="액자">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-kids-figure">
+                                        <img src="images/HomeDecor13.png" alt="우든 미니피겨">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <button type="button" class="quick-thumb-btn" data-tooltip="#tooltip-kids-drawer">
+                                        <img src="images/HomeDecor14.png" alt="서랍장">
+                                    </button>
+                                </li>
+                                <li class="styling-quickbar_item">
+                                    <a href="#" class="quick-more-btn">
+                                        <img src="images/HomeDecor15.png" alt="더보기">
+                                        <span class="quick-more-text">+5</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+            NEW News Section (NEW 소식 슬라이더)
+            ========================================================================== -->
+        <section class="news-section">
+        <div class="news-section_container">
+            
+            <!-- 섹션 헤더 (좌측 타이틀 + 우측 좌우 네비게이션 버튼) -->
+            <div class="news-section_header">
+            <div class="news-section_title-box">
+                <h2 class="news-section_title"><span class="highlight">NEW</span> 소식</h2>
+                <p class="news-section_desc">레고에서 만날 수 있는 최근 소식을 확인해 보세요</p>
+            </div>
+            <div class="news-section_controls">
+                <button type="button" class="news-btn news-btn--prev" aria-label="이전 소식 보기">
+                <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                    <path d="M9 1L1 9L9 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </button>
+                <button type="button" class="news-btn news-btn--next" aria-label="다음 소식 보기">
+                <svg width="10" height="18" viewBox="0 0 10 18" fill="none">
+                    <path d="M1 1L9 9L1 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </button>
+            </div>
+            </div>
+
+            <!-- 슬라이더 래퍼 -->
+            <div class="news-slider_wrapper">
+            <ul class="news-slider_list">
+                
+                <!-- 1번 카드 -->
+                <li class="news-card">
+                <a href="#" class="news-card_link">
+                    <div class="news-card_info">
+                    <h3 class="news-card_title">레고랜드에서 몬스터 플래시 최대 50% 세일중</h3>
+                    <span class="news-card_date">2026.09.29</span>
+                    </div>
+                    <div class="news-card_thumb">
+                    <img src="images/Poster1.png" alt="레고랜드 몬스터 플래시 세일 포스터">
+                    </div>
+                </a>
+                </li>
+
+                <!-- 2번 카드 -->
+                <li class="news-card">
+                <a href="#" class="news-card_link">
+                    <div class="news-card_info">
+                    <h3 class="news-card_title">[레고PLAY 페스티벌] 놀이에 한계는 없어! 사전 예매중</h3>
+                    <span class="news-card_date">2026.09.25</span>
+                    </div>
+                    <div class="news-card_thumb">
+                    <img src="images/Poster2.png" alt="레고 PLAY 페스티벌 포스터">
+                    </div>
+                </a>
+                </li>
+
+                <!-- 3번 카드 -->
+                <li class="news-card">
+                <a href="#" class="news-card_link">
+                    <div class="news-card_info">
+                    <h3 class="news-card_title">LG U+멤버십 고객님들께만 드리는 최대 혜택!</h3>
+                    <span class="news-card_date">2026.09.10</span>
+                    </div>
+                    <div class="news-card_thumb">
+                    <img src="images/Poster3.png" alt="LG U+ 멤버십 혜택 포스터">
+                    </div>
+                </a>
+                </li>
+
+                <!-- 4번 카드 -->
+                <li class="news-card">
+                <a href="#" class="news-card_link">
+                    <div class="news-card_info">
+                    <h3 class="news-card_title">레고 포켓몬 트레이너가 되다! 레고랜드에서 먼저 만나보세요!</h3>
+                    <span class="news-card_date">2026.08.28</span>
+                    </div>
+                    <div class="news-card_thumb">
+                    <img src="images/Poster4.png" alt="레고 포켓몬 페스티벌 포스터">
+                    </div>
+                </a>
+                </li>
+
+                <!-- 5번 카드 (슬라이드 예시) -->
+                <li class="news-card">
+                <a href="#" class="news-card_link">
+                    <div class="news-card_info">
+                    <h3 class="news-card_title">[레고랜드] 가을 시즌 한정 특별 휴가 패키지 오픈</h3>
+                    <span class="news-card_date">2026.08.20</span>
+                    </div>
+                    <div class="news-card_thumb">
+                    <img src="images/Poster5.png" alt="레고랜드 가을 시즌 패키지">
+                    </div>
+                </a>
+                </li>
+
             </ul>
-          </li>
-        
-        
-          <li>
-            <h2><a href="#">지원</a></h2>
-            <ul class="footer-sub-menu">
-              <li><a href="#">연락처</a></li>
-              <li><a href="#">조립설명서 찾기</a></li>
-              <li><a href="#">부품 신청</a></li>
-              <li><a href="#">레고® 발송 및 배송</a></li>
-              <li><a href="#">레고® 반품</a></li>
-              <li><a href="#">결제 방식</a></li>
-              <li><a href="#">이용약관</a></li>
-              <li><a href="#">제품리콜</a></li>
-            </ul>
-          </li>
-        
-        
-          <li>
-            <h2><a href="#">명소</a></h2>
-            <ul class="footer-sub-menu">
-              <li><a href="#">레고® 하우스</a></li>
-              <li><a href="#">레고랜드® 파크</a></li>
-              <li><a href="#">레고랜드 디스커버리 센터</a></li>
-            </ul>
-          </li>
-        
-        
-          <li>
-            <h2><a href="#">기타 정보</a></h2>
-            <ul class="footer-sub-menu">
-              <li><a href="#">LEGO® Magazine(무료) </a></li>
-              <li><a href="#">레고 에듀케이션</a></li>
-              <li><a href="#">레고 아이디어</a></li>
-              <li><a href="#">레고 파운데이션</a></li>
-              <li><a href="#">제휴  프로그램</a></li>
-            </ul>
-          </li>
-        </ul>
-      
-        <div class="footer-logo">
-          <img src="images/logo-footer.jpg" alt="logo">
-          <ul class="footer-social-pc">
-          <li><a href="https://www.facebook.com/LEGO" target="_blank"><img src="images/icon-facebook.png" alt="레고 페이스북"></a></li>
-          <li><a href="https://www.instagram.com/lego/" target="_blank"><img src="images/icon-instagram.png" alt="레고 인스타그램"></a></li>
-          <li><a href="https://www.youtube.com/LEGO" target="_blank"><img src="images/icon-youtube.png" alt="레고 유튜브"></a></li>
-          <li><a href="https://www.tiktok.com/@lego" target="_blank"><img src="images/icon-tiktok.png" alt="레고 틱톡"></a></li>
-        </ul>
+            </div>
+
         </div>
-        
-      </div>
-    </div>
-  
-    <!-- Tablet / Mobile footer -->
-    <div class="footer-responsive">
-      <div class="footer-responsive-head">
-        <h1>Only The Best<br class="footer-title-break"> Is Good Enough</h1>
-        <img class="footer-face" src="images/legoHead.png" alt="레고 얼굴">
-      </div>
+        </section>
+    </main>
 
-      <ul class="footer-responsive-menu">
-        <li>
-          <h2><a href="#">회사소개</a></h2>
-          <ul>
-            <li><a href="#">레고 그룹 소개</a></li>
-            <li><a href="#">레고® 뉴스</a></li>
-            <li><a href="#">레고 소식</a></li>
-            <li><a href="#">지속가능한 사업</a></li>
-          </ul>
-        </li>
-        <li>
-          <h2><a href="#">지원</a></h2>
-          <ul>
-            <li><a href="#">연락처</a></li>
-            <li><a href="#">레고® 반품</a></li>
-            <li><a href="#">레고® 발송 및 배송</a></li>
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">조립설명서 찾기</a></li>
-          </ul>
-        </li>
-        <li>
-          <h2><a href="#">명소</a></h2>
-          <ul>
-            <li><a href="#">레고® 하우스</a></li>
-            <li><a href="#">레고랜드® 파크</a></li>
-          </ul>
-        </li>
-        <li class="footer-other">
-          <h2><a href="#">기타 정보</a></h2>
-        </li>
-      </ul>
-
-      <div class="footer-responsive-bottom">
-        <a href="index.html"><img class="footer-brand" src="images/logo-footer.jpg" alt="LEGO 홈"></a>
-        <ul class="footer-social">
-          <li><a href="https://www.facebook.com/LEGO" target="_blank"><img src="images/icon-facebook.png" alt="레고 페이스북"></a></li>
-          <li><a href="https://www.instagram.com/lego/" target="_blank"><img src="images/icon-instagram.png" alt="레고 인스타그램"></a></li>
-          <li><a href="https://www.youtube.com/LEGO" target="_blank"><img src="images/icon-youtube.png" alt="레고 유튜브"></a></li>
-          <li><a href="https://www.tiktok.com/@lego" target="_blank"><img src="images/icon-tiktok.png" alt="레고 틱톡"></a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
-  <div class="copyright">
-    <div class="copyright-inner">
-      ©2026 The LEGO Group. All rights reserved. <br>
-      레고코리아(주) 대표이사 : CLAUS KRISTENSEN(크라우스크리스텐센), 정희영 | 주소 : 서울특별시 강남구 강남대로382, 메리츠타워 12층 우편번호 06232 사업자등록번호:126-81-25525 | 통신판매업신고 제 2010-서울강남-00549호<br>
-      사업자등록확인고객센터 무료전화 : 080-880-0166 | 업무시간 : 월요일-금요일 오전9시-오후6시
-    </div>
-  </div>
-
-
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-head">
+                <h1 class="footerlego"><img src="images/legoHead.png" alt="logo"></h1>
+                <h1 class="footer-head">Only The Best Is Good Enough</h1>
+            </div>
+            <div class="footer-main">
+                <ul class="footer-menu">
+                    <li>
+                        <h2><a href="#">회사소개</a></h2>
+                        <ul class="footer-sub-menu">
+                        <li><a href="#">레고 그룹 소개</a></li>
+                        <li><a href="#">레고® 뉴스</a></li>
+                        <li><a href="#">레고 소식</a></li>
+                        <li><a href="#">지속가능한 사업</a></li>
+                        <li><a href="#">공급망 투명성 선언</a></li>
+                        <li><a href="#">레고 제품 인증</a></li>
+                        <li><a href="#">LEGO Compliance Line</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2><a href="#">지원</a></h2>
+                        <ul class="footer-sub-menu">
+                        <li><a href="#">연락처</a></li>
+                        <li><a href="#">조립설명서 찾기</a></li>
+                        <li><a href="#">부품 신청</a></li>
+                        <li><a href="#">레고® 발송 및 배송</a></li>
+                        <li><a href="#">레고® 반품</a></li>
+                        <li><a href="#">결제 방식</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">제품리콜</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2><a href="#">명소</a></h2>
+                        <ul class="footer-sub-menu">
+                        <li><a href="#">레고® 하우스</a></li>
+                        <li><a href="#">레고랜드® 파크</a></li>
+                        <li><a href="#">레고랜드 디스커버리 센터</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2><a href="#">기타 정보</a></h2>
+                        <ul class="footer-sub-menu">
+                        <li><a href="#">LEGO® Magazine(무료) </a></li>
+                        <li><a href="#">레고 에듀케이션</a></li>
+                        <li><a href="#">레고 아이디어</a></li>
+                        <li><a href="#">레고 파운데이션</a></li>
+                        <li><a href="#">제휴  프로그램</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="footer-logo"><img src="images/logo-footer.jpg" alt="logo"></div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

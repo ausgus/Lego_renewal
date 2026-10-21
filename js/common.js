@@ -30,8 +30,11 @@ $(document).ready(function(){
   });
 
 
+  //is() 는 조건에 맞는지 확인해서 true/false 값을 돌려줌  
+  // :visible 은 화면에 보이는 지를 확인하는 선택자
+  
   $('.mobile-main-menu h2 a').click(function(e){
-    if ($(this).parent().next().is(':visible')) { //is() 는 조건에 맞는지 확인해서 true/false 값을 돌려줌 
+    if ($(this).parent().next().is(':visible')) { 
       return;
     }
 
