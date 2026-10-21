@@ -108,7 +108,7 @@ $(document).ready(function(){
   // --------------------Best Carousel--------------------
   $('.best-main > .best-img').last().prependTo('.best-main');
 
-  // let distance = 0; 
+  let distance = 0; 
 
   // 카드 너비와 간격을 더해서, 한 번에 이동할 거리
   function setBestPosition(){

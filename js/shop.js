@@ -38,7 +38,7 @@ const products = [
   {
     name: 'McLaren P1™',
     block: 3893,
-    category: ['vehicle', 'McLaren'],
+    category: ['vehicle', 'car'],
     price: 599900,
     img: 'images/vehicle/car_McLarenP1.png'
   },
@@ -86,7 +86,7 @@ const products = [
   {
     name: "McLaren MCL39 F1® 자동차",
     block: 1675,
-    category: ['vehicle', 'car'],
+    category: ['vehicle', 'F1'],
     price: 289900,
     img: 'images/vehicle/F1_McLarenMCL39F1.png'
   },
@@ -343,7 +343,7 @@ const products = [
 
   {
     name: "반지의 제왕: 발록™<br>북누크",
-    category: ['collection', , 'movie'],
+    category: ['collection',  'movie'],
     block: 1201,
     price: 135920,
     img: 'images/collection/movie_Booknook.png'

@@ -221,11 +221,11 @@ section:last-child{margin-bottom: 100px;}
 
 
 .card-summary li:nth-child(3){
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgb(255, 255, 255, 0.25);
   color: #ffffff;
   padding: 3px 14px;
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(255, 255, 255, 0.2);
   font-size: var(--regular);
 }
 
@@ -928,6 +928,9 @@ section:last-child{margin-bottom: 100px;}
 
   .story-right{width: 100%; aspect-ratio: 357 / 212; border-radius: 8px;}
 
+
+  .cont-tit {top: 6%;}
+  
 
   .cont-tit::before{top: 3px; left: -6px; width: 1px; height: 28px;}
 
