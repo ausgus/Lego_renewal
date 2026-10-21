@@ -31,10 +31,15 @@ $(document).ready(function(){
 
 
   $('.mobile-main-menu h2 a').click(function(e){
+    if ($(this).parent().next().is(':visible')) { //is() 는 조건에 맞는지 확인해서 true/false 값을 돌려줌 
+      return;
+    }
+
     e.preventDefault();
     $('.mobile-main-menu h2 a').parent().next().stop().slideUp();
     $(this).parent().next().stop().slideToggle();
   });
+
 
 
 });
