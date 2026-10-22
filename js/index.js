@@ -20,6 +20,31 @@ $('.series-tab_btn').on('click', function(e) {
   $(targetPanel).addClass('is-active');
 });
 
+// 2초마다 다음 시리즈 탭으로 전환
+function nextSeries() {
+  let buttons = $('.series-tab_btn');
+  let i = buttons.index($('.series-tab_btn.is-active'));
+
+  i++;
+
+  if (i >= buttons.length) {
+    i = 0;
+  }
+
+  buttons.eq(i).trigger('click');
+}
+
+let seriesTimer = setInterval(nextSeries, 2000);
+
+$('.series-showcase').on('mouseenter', function () {
+  clearInterval(seriesTimer);
+});
+
+$('.series-showcase').on('mouseleave', function () {
+  clearInterval(seriesTimer);
+  seriesTimer = setInterval(nextSeries, 2000);
+});
+
 // 홈 스타일링 하단 썸네일 호버 인터랙션
 $('.quick-thumb-btn').on('mouseenter', function() {
   if ($(window).width() <= 600) {
@@ -89,4 +114,24 @@ $('.news-btn--prev').on('click', function() {
   $('.news-slider_wrapper').animate({
     scrollLeft: $('.news-slider_wrapper').scrollLeft() - scrollAmount
   }, 300);
+});
+
+// 특별한 선물 섹션에 도달하면 원래 위치로 이동하며 선명하게 표시
+$(window).on('scroll', function () {
+  let sc = $(this).scrollTop();
+  let giftSc = $('.special-gift').offset().top;
+  let windowHeight = $(window).height();
+  let giftHeight = $('.special-gift').outerHeight();
+
+  if (sc + windowHeight >= giftSc + giftHeight / 3) {
+    $('.special-gift_gallery').css({
+      transform: 'translateX(0)',
+      opacity: 1
+    });
+
+    $('.special-gift_content').css({
+      transform: 'translateX(0)',
+      opacity: 1
+    });
+  }
 });

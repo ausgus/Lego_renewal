@@ -25,6 +25,16 @@ h1{color: #eaeaea;}
 }
 
 
+.category-list > li:first-child h1 {
+  font-size: var(--title1);
+}
+
+
+.category-list > li h1 {
+  font-size: clamp(14px, 3.8vw, 34px);
+}
+
+
 .sub-category{
   line-height: 1.7; margin-top: 20px;
   display: none;
@@ -50,7 +60,7 @@ h1{color: #eaeaea;}
 
 
 .productCard{
-  width: 300px; height: 400px;
+  width: 100%; height: 400px;
   box-sizing: border-box;
   border-radius: 10px;
   display: flex; flex-direction: column;
@@ -106,7 +116,7 @@ h1{color: #eaeaea;}
 
 
 .productImg{
-  width: 220px; height: 280px;
+  width: 100%; height: 280px;
   aspect-ratio: 3 / 4; object-fit: contain;
   transition: all 0.3s;
 }

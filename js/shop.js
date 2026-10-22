@@ -1,9 +1,16 @@
 
 
+// ------------------------JQuery-----------
 
 
-
-
+//카테고리 아코디언
+$(document).ready(function () {
+  $('.main-category').click(function () { 
+    $('.main-category').parent().next('.sub-category').slideUp(300);
+    $(this).parent().next('.sub-category').stop().slideToggle(300);
+  });
+  
+});
 
 
 

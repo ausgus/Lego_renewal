@@ -504,6 +504,7 @@ Series Showcase Section (인기 시리즈 쇼케이스 탭)
    ========================================================================== */
 .special-gift {
   position: relative;
+  overflow-x: clip;
   width: 100%;
   padding-top: 100px;
   padding-bottom: 160px;
@@ -528,6 +529,9 @@ Series Showcase Section (인기 시리즈 쇼케이스 탭)
 
 /* 좌측 2x2 이미지 갤러리 그리드 */
 .special-gift_gallery {
+  transform: translateX(-30%);
+  opacity: 0.3;
+  transition: transform 0.8s, opacity 0.8s;
   flex: 1.2;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -614,6 +618,9 @@ Series Showcase Section (인기 시리즈 쇼케이스 탭)
 .special-gift_content {
   flex: 1;
   max-width: 540px;
+  transform: translateX(30%);
+  opacity: 0.3;
+  transition: transform 0.8s, opacity 0.8s;
 }
 
 .special-gift_title {
@@ -1184,9 +1191,9 @@ footer{
 
   .special-gift {padding: 80px 0;}
   .special-gift_container {width: 92%; flex-direction: column-reverse; gap: 40px;}
-  .special-gift_content {flex: none; width: 100%; max-width: 100%; text-align: center;}
+  .special-gift_content {flex: none; width: 100%; max-width: 100%; text-align: center; transform: translateX(15%);}
   .special-gift_desc {font-size: var(--regular); margin-bottom: 24px;}
-  .special-gift_gallery {flex: none; width: 100%; max-width: 695px;}
+  .special-gift_gallery {flex: none; width: 100%; max-width: 695px; transform: translateX(-15%);}
   .special-gift_theme {font-size: var(--title2);}
 
   .home-styling {padding: 80px 4%;}

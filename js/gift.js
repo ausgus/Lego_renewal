@@ -47,6 +47,7 @@ $(document).ready(function(){
 
 
   $('.hero-arrow .prev-btn').click(function(){
+    $('.hero-img').stop(true, true);
     prevHero();
   });
 
@@ -82,11 +83,11 @@ $(document).ready(function(){
 
   $('.mainhero-wrap').mouseleave(function() {
     clearInterval(heroTimer);
-    heroTimer = setInterval(nextHero, 4000);
+    heroTimer = setInterval(nextHero, 2000);
   });
 
 
-  let heroTimer = setInterval(nextHero, 4000);
+  let heroTimer = setInterval(nextHero, 2000);
 
 
   $('.mainhero-wrap').mouseenter(function() {
@@ -201,4 +202,19 @@ heartBtns.forEach(function(btn){
   });
 
 
+});
+
+// Story 섹션의 1/3 지점이 화면에 들어오면 선명하게 표시
+$(window).on('scroll', function () {
+  let sc = $(this).scrollTop();
+  let storySc = $('.story').offset().top;
+  let windowHeight = $(window).height();
+  let storyHeight = $('.story').outerHeight();
+
+  if (sc + windowHeight >= storySc + storyHeight / 3) {
+    $('.story-tit, .story-right').css({
+      transform: 'translateX(0)',
+      opacity: 1
+    });
+  }
 });
