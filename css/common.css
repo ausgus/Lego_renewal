@@ -783,3 +783,15 @@ footer a{color: #1a1a1a;}
 
 
 }
+
+
+
+@media (max-width:450px) {
+  .footer-responsive-menu{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-responsive-menu > li:nth-child(3){
+    display: none;
+  }
+}

@@ -18,6 +18,88 @@ $(document).ready(function () {
 // --------------productsList---------------
 
 const products = [
+  // all
+  {
+    name: "레고® 하우스",
+    category: ['architech'],
+    block: 774,
+    price: 69900,
+    img: 'images/architech/LEGOHouse.png'
+  },
+
+  {
+    name: "월-E와 이브",
+    category: ['collection', 'animation'],
+    block: 811,
+    price: 99900,
+    img: 'images/collection/animation_WALL_E.png'
+  },
+
+  {
+    name: "뉴욕시티: 빅 애플",
+    category: ['architech'],
+    block: 1465,
+    price: 219900,
+    img: 'images/architech/BigApple.png'
+  },
+
+  {
+    name: "Vincent van Gogh:<br>해바라기",
+    category: ['art'],
+    block: 2615,
+    price: 279900,
+    img: 'images/art/Gogh.png'
+  },
+
+  {
+    name: "트래비 분수",
+    category: ['architech'],
+    block: 1880,
+    price: 219900,
+    img: 'images/architech/FountainofTrevi.png'
+  },
+  
+    {
+    name: "LOVE",
+    category: ['art'],
+    block: 791,
+    price: 104900,
+    img: 'images/art/love.png'
+  },
+  
+  {
+    name: "Koenigsegg Sadair's<br>Spear Megacar",
+    block: 4104,
+    category: ['vehicle', 'car'],
+    price: 300000,
+    img: 'images/vehicle/car_KoenigseggSadairSpearMegacar.png'
+  },
+
+  {
+    name: "은하수 은하계",
+    category: ['art'],
+    block: 3091,
+    price: 259900,
+    img: 'images/art/milkyway.png'
+  },
+  {
+    name: 'McLaren P1™',
+    block: 3893,
+    category: ['vehicle', 'car'],
+    price: 599900,
+    img: 'images/vehicle/car_McLarenP1.png'
+  },
+
+
+
+
+
+
+
+
+
+
+// car
   {
     name: 'Oracle Red Bull<br>Racing RB20 F1<br>레이스 카',
     block: 1639,
@@ -40,22 +122,6 @@ const products = [
     category: ['vehicle', 'motorCycle'],
     price: 114900,
     img: 'images/vehicle/motorCycle_KawasakiNinjaH2R.png'
-  },
-
-  {
-    name: 'McLaren P1™',
-    block: 3893,
-    category: ['vehicle', 'car'],
-    price: 599900,
-    img: 'images/vehicle/car_McLarenP1.png'
-  },
-
-  {
-    name: "Koenigsegg Sadair's<br>Spear Megacar",
-    block: 4104,
-    category: ['vehicle', 'car'],
-    price: 300000,
-    img: 'images/vehicle/car_KoenigseggSadairSpearMegacar.png'
   },
 
   {
@@ -147,14 +213,6 @@ const products = [
   },
 
   {
-    name: "트래비 분수",
-    category: ['architech'],
-    block: 1880,
-    price: 219900,
-    img: 'images/architech/FountainofTrevi.png'
-  },
-
-  {
     name: "히메지 성",
     category: ['architech'],
     block: 1643,
@@ -162,21 +220,6 @@ const products = [
     img: 'images/architech/HimejiCastle.png'
   },
 
-  {
-    name: "레고® 하우스",
-    category: ['architech'],
-    block: 774,
-    price: 69900,
-    img: 'images/architech/LEGOHouse.png'
-  },
-
-  {
-    name: "뉴욕시티: 빅 애플",
-    category: ['architech'],
-    block: 1465,
-    price: 219900,
-    img: 'images/architech/BigApple.png'
-  },
 
   {
     name: "런던",
@@ -204,22 +247,6 @@ const products = [
   },
 
   {
-    name: "Vincent van Gogh:<br>해바라기",
-    category: ['art'],
-    block: 2615,
-    price: 279900,
-    img: 'images/art/Gogh.png'
-  },
-
-  {
-    name: "은하수 은하계",
-    category: ['art'],
-    block: 3091,
-    price: 259900,
-    img: 'images/art/milkyway.png'
-  },
-
-  {
     name: "Gustav Klimt: 키스",
     category: ['art'],
     block: 4000,
@@ -233,14 +260,6 @@ const products = [
     block: 1773,
     price: 169900,
     img: 'images/art/Dance.png'
-  },
-
-  {
-    name: "LOVE",
-    category: ['art'],
-    block: 791,
-    price: 104900,
-    img: 'images/art/love.png'
   },
 
   {
@@ -259,14 +278,6 @@ const products = [
     img: 'images/art/blossoms.png'
   },
 // -------------------------컬렉션
-  
-  {
-    name: "월-E와 이브",
-    category: ['collection', 'animation'],
-    block: 811,
-    price: 99900,
-    img: 'images/collection/animation_WALL_E.png'
-  },
 
   {
     name: "반지의 제왕:<br>미나스 티리스™",

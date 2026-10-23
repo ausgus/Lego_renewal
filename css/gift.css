@@ -444,6 +444,48 @@ section:last-child{margin-bottom: 100px;}
 
 .block-num img{display: block; width: 45px; height: 35px;}
 
+.block-num a{
+  position: relative;
+  display: block;
+}
+
+/* 기존 블록 이미지 위에 겹칠 빨간 블록 */
+.block-num a::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--pointLime);
+  mask: url('../images/gift/myself_blockNum.png') center / 100% 100% no-repeat;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .block-num > li:hover img,
+  .block-num > li.big img{opacity: 0;}
+
+  .block-num > li:hover a::before,
+  .block-num > li.big a::before{
+    opacity: 1;
+  }
+
+  /* 마스크 바깥의 li에 그림자를 적용해 빛이 잘리지 않게 함 */
+  .block-num > li:hover,
+  .block-num > li.big{
+    animation: blockGlow 1.4s ease-in-out infinite;
+  }
+}
+
+@keyframes blockGlow{
+  0%, 100%{
+    filter: drop-shadow(0 0 2px #fff);
+  }
+
+  50%{
+    filter: drop-shadow(0 0 12px #fff);
+  }
+}
+
 
 
 .block-num p{
